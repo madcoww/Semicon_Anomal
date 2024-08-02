@@ -1,0 +1,39 @@
+[tool.poetry]
+name = "ai-test"
+version = "0.1.0"
+description = ""
+authors = ["wonjun.kim"]
+readme = "README.md"
+packages = [{include = "ai_test"}]
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.12"
+numpy = "^2.0.0"
+torch = {version = "~2.3.0+cu121", source = "pytorch-cuda"}
+torchvision = {version = "~0.18.0+cu121", source = "pytorch-cuda"}
+torchaudio =  {version = "~2.3.0", source = "pytorch-cuda"}
+huggingface-hub = "0.23.4"
+transformers = "^4.41.2"
+bitsandbytes = "0.41.3"
+accelerate = "^0.31.0"
+backports-weakref = "^1.0.post1"
+backports-lzma = "^0.0.14"
+setuptools = "^70.1.0"
+scikit-learn = "^1.5.0"
+openai = "^1.35.7"
+pandas = "^2.2.2"
+scipy = "^1.14.0"
+attrs = "^23.2.0"
+torchtune = "^0.1.1+cu121"
+datasets = "^2.20.0"
+peft = "^0.11.1"
+tokenizers = "^0.19.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[[tool.poetry.source]]
+name = "pytorch-cuda"
+url = "https://download.pytorch.org/whl/cu121"

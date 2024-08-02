@@ -1,0 +1,265 @@
+{
+  "added_tokens_decoder": {
+    "0": {
+      "content": "[PAD]",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "1": {
+      "content": "[UNK]",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "2": {
+      "content": "[CLS]",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "3": {
+      "content": "[SEP]",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "4": {
+      "content": "[MASK]",
+      "lstrip": false,
+      "normalized": false,
+      "rstrip": false,
+      "single_word": false,
+      "special": true
+    },
+    "30000": {
+      "content": "[Label : 1]",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false,
+      "special": false
+    },
+    "30001": {
+      "content": "Label : 0]",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false,
+      "special": false
+    },
+    "30002": {
+      "content": "[Attack Syntax :]",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false,
+      "special": false
+    },
+    "30003": {
+      "content": "[Attack Type :]",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false,
+      "special": false
+    },
+    "30004": {
+      "content": "[nan]",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false,
+      "special": false
+    },
+    "30005": {
+      "content": "[SQL Injection]",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false,
+      "special": false
+    },
+    "30006": {
+      "content": "[Cross - Site Scripting ( XSS )]",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false,
+      "special": false
+    },
+    "30007": {
+      "content": "[Path Traversal]",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false,
+      "special": false
+    },
+    "30008": {
+      "content": "[Remote Code Execution ( RCE )]",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false,
+      "special": false
+    },
+    "30009": {
+      "content": "[XML External Entity ( XXE ) Injection]",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false,
+      "special": false
+    },
+    "30010": {
+      "content": "[</]",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false,
+      "special": false
+    },
+    "30011": {
+      "content": "[//]",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false,
+      "special": false
+    },
+    "30012": {
+      "content": "[://]",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false,
+      "special": false
+    },
+    "30013": {
+      "content": "[../]",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false,
+      "special": false
+    },
+    "30014": {
+      "content": "[.../]",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false,
+      "special": false
+    },
+    "30015": {
+      "content": "[...]",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false,
+      "special": false
+    },
+    "30016": {
+      "content": "[..]",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false,
+      "special": false
+    },
+    "30017": {
+      "content": "[/**/]",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false,
+      "special": false
+    },
+    "30018": {
+      "content": "[((]",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false,
+      "special": false
+    },
+    "30019": {
+      "content": "[))]",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false,
+      "special": false
+    },
+    "30020": {
+      "content": "[||]",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false,
+      "special": false
+    },
+    "30021": {
+      "content": "[<?]",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false,
+      "special": false
+    },
+    "30022": {
+      "content": "[<!]",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false,
+      "special": false
+    },
+    "30023": {
+      "content": "[\\..]",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false,
+      "special": false
+    },
+    "30024": {
+      "content": "[< script >]",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false,
+      "special": false
+    },
+    "30025": {
+      "content": "[< / script >]",
+      "lstrip": false,
+      "normalized": true,
+      "rstrip": false,
+      "single_word": false,
+      "special": false
+    }
+  },
+  "clean_up_tokenization_spaces": true,
+  "cls_token": "[CLS]",
+  "do_basic_tokenize": true,
+  "do_lower_case": false,
+  "mask_token": "[MASK]",
+  "model_max_length": 1000000000000000019884624838656,
+  "never_split": null,
+  "pad_token": "[PAD]",
+  "sep_token": "[SEP]",
+  "strip_accents": null,
+  "tokenize_chinese_chars": true,
+  "tokenizer_class": "BertTokenizer",
+  "unk_token": "[UNK]"
+}
