@@ -18,7 +18,7 @@ import os
 import torch.distributed as dist
 import torch.multiprocessing as mp
 from torch.utils.data.distributed import DistributedSampler
-
+from torch.nn.parallel import DistributedDataParallel as DDP
 
 class AlBertMain:
     def __init__(self):
@@ -87,15 +87,19 @@ class AlBertMain:
             for lr in self.config.LEARNING_RATE:
                 print(f"Training with EPOCHS={epochs}, LEARNING RATE={lr}")
                 self.load_model()
+                self.model.to(self.device)
 
-                # 옵티마이저 및 손실 함수 설정
+                # Wrap the model in DDP
+                self.model = DDP(self.model, device_ids=[rank])
+
+                # Set up the optimizer and loss function
                 optimizer = torch.optim.AdamW(self.model.parameters(), lr=lr)
                 criterion = nn.CrossEntropyLoss()
 
-                # Trainer 인스턴스 생성
+                # Create an instance of the Trainer
                 trainer = Trainer(self.model, train_loader, val_loader, optimizer, criterion, self.device, rank)
 
-                # 모델 학습
+                # Train the model
                 start_training = time.time()
                 trainer.train(epochs=epochs)
                 end_training = time.time()
@@ -103,12 +107,12 @@ class AlBertMain:
                 train_time = end_training - start_training
 
                 print(train_time)
-                # 검증 데이터셋으로 평가
+                # Validate the model
                 val_loss = trainer.validate()
 
                 if val_loss < best_val_loss:
                     best_val_loss = val_loss
-                    best_model_state = self.model.state_dict()
+                    best_model_state = self.model.module.state_dict()
                     best_hyperparameters = {'epochs': epochs, 'learning_rate': lr}
 
                     save_dir = self.config.SAVE_TEST_MODEL_PATH
@@ -116,7 +120,7 @@ class AlBertMain:
                     model_filename = f"al_xLarge_AdamW_m2_v2_50_epoch{epochs}_lr{lr}.pt"
                     save_path = os.path.join(save_dir, model_filename)
 
-                    # 경로가 존재하지 않으면 생성
+                    # Create the directory if it doesn't exist
                     if not os.path.exists(save_dir):
                         os.makedirs(save_dir)
 
@@ -147,6 +151,7 @@ def cleanup():
     dist.destroy_process_group()
 
 def main_worker(rank, world_size):
+    torch.cuda.set_device(rank)
     bert_main = AlBertMain()
     bert_main.run(rank, world_size)
 

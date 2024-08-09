@@ -13,7 +13,7 @@ import pandas as pd
 
 class AlbertTest:
     def __init__(self, model_name, best_model_path, test_loader, device):
-        self.tokenizer = BertTokenizer.from_pretrained('/SSD/ai_test/ctokenizer_32')
+        self.tokenizer = BertTokenizer.from_pretrained('/SSD/ai_test/ctokenizer_test')
         self.model = CustomAlBert(model_name, device, self.tokenizer)
         self.model.load_state_dict(torch.load(best_model_path, map_location=device))
         self.test_loader = test_loader

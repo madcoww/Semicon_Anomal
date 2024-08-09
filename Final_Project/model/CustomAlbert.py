@@ -3,8 +3,10 @@ Author : Wonjun Kim
 e-mail : wonjun.kim@seculayer.com
 Powered by Seculayer © 2024 AI Team, R&D Center.
 """
+import torch
 import torch.nn as nn
 from transformers import AlbertModel
+import bitsandbytes as bnb
 
 class CustomAlBert(nn.Module):
     def __init__(self, model_name, device, tokenizer):

@@ -20,13 +20,13 @@ class Trainer:
         self.final_params = None
 
         # Distributed data parallel
-        self.model = DDP(self.model, device_ids=[self.rank])
+        self.model = DDP(self.model, device_ids=[self.rank], find_unused_parameters=True)
 
     def train(self, epochs):
         self.initial_params = {name: param.clone() for name, param in self.model.module.named_parameters()}
         self.print_requires_grad(self.model.module)
 
-        self.model.train()  # 모델을 학습 모드로 설정
+        self.model.train()  # Set the model to training mode
 
         for epoch in range(epochs):
             total_loss = 0.0
@@ -57,7 +57,7 @@ class Trainer:
 
         self.final_params = {name: param.clone() for name, param in self.model.module.named_parameters()}
         param_changes = {name: (self.initial_params[name] != self.final_params[name]).sum().item() for name in self.initial_params}
-        # 파라미터 변화 출력
+        # Print parameter changes
         if self.rank == 0:
             print("\nParameter changes after training:")
             for name, change in param_changes.items():

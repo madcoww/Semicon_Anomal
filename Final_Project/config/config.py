@@ -41,7 +41,7 @@ class Config:
     <Fine-Tuning Parameter>
     """
     ALBERT_MODEL = "albert/albert-base-v2"
-    ALBERT_MODEL_2 = "albert/albert-xlarge-v2"
+    ALBERT_MODEL_2 = "google-bert/bert-base-uncased"
     MAX_LENGTH = 512
     BATCH_SIZE = 32
     EPOCHS = [15]
@@ -61,10 +61,12 @@ class Config:
     TXT_PATH = "/SSD/ai_test/result/payload.txt"
     VOCAB_SIZE = 32000
     LIMIT_ALPHABET = 1000
-    MIN_FREQUENCY = 0
+    MIN_FREQUENCY = 2
     MY_SPECIAL_TOKENS = ['[PAD]', '[UNK]', '[CLS]', '[SEP]', '[MASK]'] + \
-                        [f'[UNK{i}]' for i in range(10)] + \
-                        [f'[unused{i}]' for i in range(50)]
+                        [f'[UNK{i}]' for i in range(50)]
+
+                        # [f'[UNK{i}]' for i in range(10)] + \
+                        # [f'[unused{i}]' for i in range(50)]
 
     ADD_TOKEN = ['[Label : 1]', 'Label : 0]', '[Attack Syntax :]', '[Attack Type :]', '[nan]', '[SQL Injection]', '[Cross - Site Scripting ( XSS )]',
                  '[Path Traversal]', '[Remote Code Execution ( RCE )]', '[XML External Entity ( XXE ) Injection]', '[</]', '[//]', '[://]', '[../]',

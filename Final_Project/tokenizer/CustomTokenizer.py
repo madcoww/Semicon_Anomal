@@ -48,6 +48,6 @@ class CustomTokenizer:
 
         # self.tokenizer.save_pretrained(self.config.SAVE_TOKENIZER_30_PATH)
         # self.tokenizer.save_pretrained(self.config.SAVE_TOKENIZER_32_PATH)
-        # self.tokenizer.save_pretrained("/SSD/ai_test/ctokenizer_50")
+        self.tokenizer.save_pretrained("/SSD/ai_test/ctokenizer_test")
 
 

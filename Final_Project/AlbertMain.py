@@ -49,10 +49,8 @@ class AlBertMain:
 
         # # Custom Tokenizer 30000, 32000
         # self.tokenizer = BertTokenizer.from_pretrained(self.config.SAVE_TOKENIZER_30_PATH)
-        self.tokenizer = BertTokenizer.from_pretrained(self.config.SAVE_TOKENIZER_32_PATH)
+        self.tokenizer = BertTokenizer.from_pretrained("/SSD/ai_test/ctokenizer_test")
 
-        # # Test 50000
-        # self.tokenizer = BertTokenizer.from_pretrained("/SSD/ai_test/ctokenizer_50")
         print("Tokenizer Size :", len(self.tokenizer))
 
     def load_model(self):
@@ -123,7 +121,7 @@ class AlBertMain:
                     # save_dir = self.config.SAVE_MODEL_PATH
                     save_dir = self.config.SAVE_TEST_MODEL_PATH
 
-                    model_filename = f"al_base_AdamW_m2_v2_50_epoch{epochs}_lr{lr}.pt"
+                    model_filename = f"al_base_AdamW_m2_v2_32_epoch{epochs}_lr{lr}.pt"
                     save_path = os.path.join(save_dir, model_filename)
 
                     # 경로가 존재하지 않으면 생성
@@ -137,7 +135,7 @@ class AlBertMain:
 
     def test(self):
         self.create_datasets()
-        self.best_model_path = "/SSD/ai_test/cmodel_test/al_base_AdamW_m2_v2_50_epoch15_lr3e-05.pt"
+        self.best_model_path = "/SSD/ai_test/cmodel_test/al_base_AdamW_m2_v2_32_epoch15_lr3e-05.pt"
         albertTest = AlbertTest(self.config.ALBERT_MODEL, self.best_model_path, self.test_loader, self.device)
         start_testing = time.time()
         albertTest.test()
@@ -148,5 +146,5 @@ class AlBertMain:
 
 if __name__ == "__main__":
     bert_main = AlBertMain()
-    bert_main.run()
-    # bert_main.test()
+    # bert_main.run()
+    bert_main.test()

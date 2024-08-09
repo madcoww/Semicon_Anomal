@@ -163,5 +163,6 @@ if __name__ == "__main__":
     decoded_text = tokenizer.decode(encoding['input_ids'].squeeze().tolist(), skip_special_tokens=True)
 
     print("Tokens:", encoding["tokens"])
+    print("Input_ids", encoding['input_ids'])
     print("Decoded text:", decoded_text)
     print("Origin Text: ", text)

@@ -28,6 +28,7 @@ torchtune = "^0.1.1+cu121"
 datasets = "^2.20.0"
 peft = "^0.11.1"
 tokenizers = "^0.19.1"
+nltk = "^3.8.1"
 
 
 [build-system]
